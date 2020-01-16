@@ -8,55 +8,35 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Electoral College',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
       ),
-      home: MyHomePage(title: 'Electoral College Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Welcome to the Electoral College!',
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          backgroundColor: Colors.lightBlue[100],
+          appBar: AppBar(
+            title: TabBar(
+              tabs: [
+                Tab(icon: Icon(Icons.calendar_today)),
+                Tab(icon: Icon(Icons.poll)),
+                Tab(icon: Icon(Icons.settings)),
+              ],
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
-            ),
-          ],
+          ),
+          body: TabBarView(
+            children: [
+              Center(
+                child: Text("Upcoming Events")
+              ),
+              Center(
+                child: Text("Meet the Candidates")
+              ),
+              Center(
+                child: Text("Settings and Location")
+              ),
+            ],
+          ),
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
       ),
     );
   }
