@@ -156,10 +156,8 @@ class MyApp extends StatelessWidget {
     return Column(
       children: <Widget>[
         FittedBox(
-          fit: BoxFit.contain, // otherwise the logo will be tiny
-          child: Image(
-            image: AssetImage(image)
-          ),
+          fit: BoxFit.scaleDown,
+          child: Image.asset(image, width: 150, height: 150),
         ),
         Text(candidate),
       ],
