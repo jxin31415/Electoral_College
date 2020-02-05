@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
                 Tab(icon: Icon(Icons.calendar_today)),
                 Tab(icon: Icon(Icons.poll)),
                 Tab(icon: Icon(Icons.location_on)),
-                Tab(icon: Icon(Icons.settings)),
+                Tab(icon: Icon(Icons.people)),
               ],
             ),
             flexibleSpace: Image(
@@ -34,13 +34,13 @@ class MyApp extends StatelessWidget {
                 child: Text("Upcoming Events")
               ),
               Center(
-                child: loadCandidates()
+                child: Text("How do I vote?")
               ),
               Center(
                 child: Text("Where can I vote?")
               ),
               Center(
-                child: Text("Settings and Location")
+                child: loadCandidates()
               ),
             ],
           ),
@@ -55,20 +55,8 @@ class MyApp extends StatelessWidget {
       children: <Widget>[
         Container(
           height: 50,
-          color: Colors.amber[600],
-          child: const Center(child: Text('In the Spotlight')),
-        ),
-        Container(
-          height:20,
-        ),
-        generateCandidate('assets/spotlight.png', "To be decided"),
-        Container(
-          height:40,
-        ),
-        Container(
-          height: 50,
           color: Colors.amber[100],
-          child: const Center(child: Text('List of Candidates')),
+          child: const Center(child: Text('Democratic Candidates')),
         ),
         Container(
           height:20,
@@ -111,6 +99,52 @@ class MyApp extends StatelessWidget {
             ),
             Expanded(
                 child: generateCandidate('assets/steyer.png', "Tom Steyer"),
+            ),
+          ],
+        ),
+        Container(
+          height:20,
+        ),
+        Row(
+          children: <Widget>[
+            Expanded(
+              child: generateCandidate('assets/buttigieg.png', "Pete Buttigieg"),
+            ),
+            Container(
+              width: 5,
+            ),
+            Expanded(
+              child: generateCandidate('assets/bloomberg.png', "Michael Bloomberg"),
+            ),
+            Container(
+              width: 5,
+            ),
+            Expanded(
+                child: generateCandidate('assets/steyer.png', "Tom Steyer"),
+            ),
+          ],
+        ),
+        Container(
+          height:20,
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber[100],
+          child: const Center(child: Text('Republican Candidates')),
+        ),
+        Container(
+          height:20,
+        ),
+        Row(
+          children: <Widget>[
+            Expanded(
+              child: generateCandidate('assets/trump.png', "Donald Trump"),
+            ),
+            Container(
+              width: 5,
+            ),
+            Expanded(
+              child: generateCandidate('assets/sanders.png', "does anyone else even matter"),
             ),
           ],
         ),
