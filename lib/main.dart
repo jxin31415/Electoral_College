@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'Article.dart' as article;
+import 'Calendar.dart' as calendar;
+import 'Map.dart' as map;
+import 'Candidates.dart' as candidates;
+import 'Home.dart' as home;
 
 void main() => runApp(MyApp());
 
@@ -10,157 +15,32 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       ),
       home: DefaultTabController(
-        length: 4,
+        length: 5,
         child: Scaffold(
-          backgroundColor: Colors.purple[100],
-          appBar: AppBar(
-            title: TabBar(
-              tabs: [
-                Tab(icon: Icon(Icons.calendar_today)),
-                Tab(icon: Icon(Icons.poll)),
-                Tab(icon: Icon(Icons.location_on)),
-                Tab(icon: Icon(Icons.people)),
-              ],
-            ),
-            flexibleSpace: Image(
-              image: AssetImage('assets/background.png'),
-               fit: BoxFit.cover,
-            ),
-            backgroundColor: Colors.transparent,
-          ),
-          body: TabBarView(
-            children: [
-              Center(
-                child: Text("Upcoming Events")
-              ),
-              Center(
-                child: Text("How do I vote?")
-              ),
-              Center(
-                child: Text("Where can I vote?")
-              ),
-              Center(
-                child: loadCandidates()
-              ),
-            ],
-          ),
+          backgroundColor: Colors.white,
+          bottomNavigationBar: new Material(
+            color: Colors.blue,
+            child: new TabBar(
+              tabs: <Tab> [
+                new Tab(icon: new Icon(Icons.home)),
+                new Tab(icon: new Icon(Icons.people)),
+                new Tab(icon: new Icon(Icons.poll)),
+                new Tab(icon: new Icon(Icons.location_on)),
+                new Tab(icon: new Icon(Icons.calendar_today)),
+              ]
+           )
         ),
+        body: new TabBarView(
+          children: <Widget>[
+            new home.Home(),
+            new candidates.Candidates(),
+            new map.Map(),
+            new calendar.Calendar(),
+            new article.Article(),
+          ]
       ),
-    );
-  }
-
-  Widget loadCandidates() {
-    return ListView(
-      padding: const EdgeInsets.all(15),
-      children: <Widget>[
-        Container(
-          height: 50,
-          color: Colors.amber[100],
-          child: const Center(child: Text('Democratic Candidates')),
         ),
-        Container(
-          height:20,
-        ),
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: generateCandidate('assets/biden.png', "Joe Biden"),
-            ),
-            Container(
-              width: 5,
-            ),
-            Expanded(
-              child: generateCandidate('assets/sanders.png', "Bernie Sanders"),
-            ),
-            Container(
-              width: 5,
-            ),
-            Expanded(
-              child: generateCandidate('assets/warren.png', "Elizabeth Warren"),
-            ),
-          ],
-        ),
-        Container(
-          height:20,
-        ),
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: generateCandidate('assets/buttigieg.png', "Pete Buttigieg"),
-            ),
-            Container(
-              width: 5,
-            ),
-            Expanded(
-              child: generateCandidate('assets/bloomberg.png', "Michael Bloomberg"),
-            ),
-            Container(
-              width: 5,
-            ),
-            Expanded(
-                child: generateCandidate('assets/steyer.png', "Tom Steyer"),
-            ),
-          ],
-        ),
-        Container(
-          height:20,
-        ),
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: generateCandidate('assets/buttigieg.png', "Pete Buttigieg"),
-            ),
-            Container(
-              width: 5,
-            ),
-            Expanded(
-              child: generateCandidate('assets/bloomberg.png', "Michael Bloomberg"),
-            ),
-            Container(
-              width: 5,
-            ),
-            Expanded(
-                child: generateCandidate('assets/steyer.png', "Tom Steyer"),
-            ),
-          ],
-        ),
-        Container(
-          height:20,
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber[100],
-          child: const Center(child: Text('Republican Candidates')),
-        ),
-        Container(
-          height:20,
-        ),
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: generateCandidate('assets/trump.png', "Donald Trump"),
-            ),
-            Container(
-              width: 5,
-            ),
-            Expanded(
-              child: generateCandidate('assets/sanders.png', "does anyone else even matter"),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget generateCandidate(String image, String candidate){
-    return Column(
-      children: <Widget>[
-        FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Image.asset(image, width: 150, height: 150),
-        ),
-        Text(candidate),
-      ],
+    )
     );
   }
 }
