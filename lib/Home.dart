@@ -8,7 +8,7 @@ class Home extends StatelessWidget {
       title: "Electoral College",
       home: Scaffold(
         appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50.0), // here the desired height
+          preferredSize: Size.fromHeight(100.0), // here the desired height
           child: AppBar(
             centerTitle: true,
             title: Column(
@@ -30,6 +30,12 @@ class Home extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
+           /* RaisedButton(
+              color: Colors.red[300],
+
+              //onPressed:
+              child: Text("Candidates"), 
+            )*/
             Text("Candidates"),
             Text("The Electoral College"),
             Text("Map"),

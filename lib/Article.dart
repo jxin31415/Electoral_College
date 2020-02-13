@@ -7,23 +7,31 @@ class Article extends StatelessWidget {
     return MaterialApp(
       title: "Electoral College",
       home: Scaffold(
-        body: Container(
-          alignment: Alignment.topCenter,
-          child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text("TBD"),
-          ],
-        )
+        body: generateArticle()
        ),
-      )
-    );
+      );
   } 
 
   Widget generateArticle(){
     return ListView(
-
+      children: <Widget>[
+        Container(
+          height: 20,
+        ),
+        Container(
+          padding: EdgeInsets.all(10),
+          alignment: Alignment.center,
+          child: Text("What is the Electoral College?",
+            textScaleFactor: 3,
+            textAlign: TextAlign.center,
+          ),
+        ),
+        
+        Container(
+          padding: EdgeInsets.all(20),
+          child: Text("According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground."),
+        ),
+      ],
     );
   }
 }
