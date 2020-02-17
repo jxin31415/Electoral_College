@@ -37,9 +37,7 @@ class Candidates extends StatelessWidget {
           ),
         ),
         ListTile(
-         title: Container(
-          height:20,
-         ),
+         title: SizedBox(height: 20),
         ),
         ListTile(
           title: generateCandidate('assets/biden.png', "Joe Biden"),
@@ -60,9 +58,7 @@ class Candidates extends StatelessWidget {
           title: generateCandidate('assets/steyer.png', "Tom Steyer"),
         ),
         ListTile(
-         title: Container(
-          height:20,
-         ),
+         title: SizedBox(height: 20),
         ),
         ListTile(
           title: Container(
@@ -72,13 +68,13 @@ class Candidates extends StatelessWidget {
           ),
         ),
         ListTile(
-         title: Container(
-          height:20,
-         ),
+         title: SizedBox(height: 20),
         ),
         ListTile(
           title: generateCandidate('assets/trump.png', "Donald Trump"),
         )
+
+        //TO-DO
       ],
     );
   }

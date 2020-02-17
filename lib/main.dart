@@ -7,40 +7,59 @@ import 'Home.dart' as home;
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+
+  @override
+  MyAppState createState() => new MyAppState();
+}
+
+class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
+  TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = new TabController(vsync: this, length: 5);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Electoral College',
       theme: ThemeData(
       ),
-      home: DefaultTabController(
-        length: 5,
-        child: Scaffold(
+      home: Scaffold(
           backgroundColor: Colors.white,
           bottomNavigationBar: new Material(
             color: Colors.blue,
             child: new TabBar(
+              controller: _tabController,
               tabs: <Tab> [
                 new Tab(icon: new Icon(Icons.home)),
                 new Tab(icon: new Icon(Icons.people)),
-                new Tab(icon: new Icon(Icons.poll)),
                 new Tab(icon: new Icon(Icons.location_on)),
                 new Tab(icon: new Icon(Icons.calendar_today)),
+                new Tab(icon: new Icon(Icons.library_books)),
               ]
            )
         ),
         body: new TabBarView(
+          controller: _tabController,
           children: <Widget>[
-            new home.Home(),
+            new home.Home(this._tabController),
             new candidates.Candidates(),
             new map.Map(),
             new calendar.Calendar(),
             new article.Article(),
           ]
+        ) ,
       ),
-        ),
-    )
     );
   }
 }
