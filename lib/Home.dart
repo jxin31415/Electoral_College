@@ -40,6 +40,9 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
+             shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(20.0),
+             ),
              color: Colors.blue[100],
              highlightColor: Colors.blue[300],
              onPressed: () {
@@ -52,6 +55,9 @@ class Home extends StatelessWidget {
             ),
             SizedBox(height: 15),
             RaisedButton(
+             shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(20.0),
+             ),
              color: Colors.blue[100],
              highlightColor: Colors.blue[300],
              onPressed: () {
@@ -64,6 +70,9 @@ class Home extends StatelessWidget {
             ),
             SizedBox(height: 15),
             RaisedButton(
+             shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(20.0),
+             ),
              color: Colors.blue[100],
              highlightColor: Colors.blue[300],
              onPressed: () {
@@ -76,6 +85,9 @@ class Home extends StatelessWidget {
             ),
             SizedBox(height: 15),
             RaisedButton(
+             shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(20.0),
+             ),
              color: Colors.blue[100],
              highlightColor: Colors.blue[300],
              onPressed: () {

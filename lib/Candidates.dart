@@ -1,4 +1,15 @@
 import 'package:flutter/material.dart';
+import 'candidateList/Biden.dart';
+import 'candidateList/Bloomberg.dart';
+import 'candidateList/Buttigieg.dart';
+import 'candidateList/Gabbard.dart';
+import 'candidateList/Klobuchar.dart';
+import 'candidateList/Sanders.dart';
+import 'candidateList/Trump.dart';
+import 'candidateList/Steyer.dart';
+import 'candidateList/Warren.dart';
+import 'candidateList/Weld.dart';
+
 
 class Candidates extends StatelessWidget {
 
@@ -20,12 +31,12 @@ class Candidates extends StatelessWidget {
          ),
         ),
       
-        body: loadCandidates(),
+        body: loadCandidates(context),
       )
     );
   } 
 
-  Widget loadCandidates() {
+  Widget loadCandidates(BuildContext context) {
     return ListView(
       padding: const EdgeInsets.all(15),
       children: <Widget>[
@@ -41,21 +52,67 @@ class Candidates extends StatelessWidget {
         ),
         ListTile(
           title: generateCandidate('assets/biden.png', "Joe Biden"),
-        ),
-        ListTile(
-          title: generateCandidate('assets/sanders.png', "Bernie Sanders"),
-        ),
-        ListTile(
-          title: generateCandidate('assets/warren.png', "Elizabeth Warren"),
-        ),
-        ListTile(
-          title: generateCandidate('assets/buttigieg.png', "Pete Buttigieg"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Biden())
+           );
+          },
         ),
         ListTile(
           title: generateCandidate('assets/bloomberg.png', "Michael Bloomberg"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Bloomberg())
+           );
+          },
+        ),
+        ListTile(
+          title: generateCandidate('assets/buttigieg.png', "Pete Buttigieg"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Buttigieg())
+           );
+          },
+        ),
+        ListTile(
+          title: generateCandidate('assets/gabbard.png', "Tulsi Gabbard"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Gabbard())
+           );
+          },
+        ),
+        ListTile(
+          title: generateCandidate('assets/tulsi.png', "Amy Klobuchar"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Klobuchar())
+           );
+          },
+        ),
+        ListTile(
+          title: generateCandidate('assets/sanders.png', "Bernie Sanders"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Sanders())
+           );
+          },
         ),
         ListTile(
           title: generateCandidate('assets/steyer.png', "Tom Steyer"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Steyer())
+           );
+          },
+        ),
+        ListTile(
+          title: generateCandidate('assets/warren.png', "Elizabeth Warren"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Warren())
+           );
+          },
         ),
         ListTile(
          title: SizedBox(height: 20),
@@ -72,14 +129,26 @@ class Candidates extends StatelessWidget {
         ),
         ListTile(
           title: generateCandidate('assets/trump.png', "Donald Trump"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Trump())
+           );
+          },
+        ),
+        ListTile(
+          title: generateCandidate('assets/weld.png', "William Weld"),
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(
+             builder: (context)=> Weld())
+           );
+          },
         )
-
         //TO-DO
       ],
     );
   }
 
-   Widget generateCandidate(String image, String candidate){
+  Widget generateCandidate(String image, String candidate){
     return ListTile(
       leading: CircleAvatar(
         backgroundImage: AssetImage(image),
