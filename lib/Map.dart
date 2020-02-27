@@ -9,8 +9,8 @@ class Map extends StatefulWidget {
 class MapState extends State<Map> {
   GoogleMapController mapController;
 
-  static final LatLng _center = const LatLng(29, -95);
-  double zoom = 11.0;
+  static final LatLng _center = const LatLng(29.656388, -95.3585341);
+  double zoom = 9.0;
   final Set<Marker> mapMarkers = new Set();
   LatLng lastMapPos = _center;
   MapType currentMapType = MapType.normal;

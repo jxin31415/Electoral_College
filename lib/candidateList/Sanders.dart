@@ -7,7 +7,13 @@ class Sanders extends StatelessWidget {
     return MaterialApp(
       title: "Electoral College",
       home: Scaffold(
-        appBar: AppBar(title: Text("Democratic Candidates")),
+        appBar: AppBar(
+          title: Text("Democratic Candidates"), 
+          automaticallyImplyLeading: true,
+          leading: IconButton(icon:Icon(Icons.arrow_back),
+            onPressed:() => Navigator.pop(context, false),
+          )
+        ),
         body: ListView(
           children: <Widget>[
             SizedBox(height: 20),

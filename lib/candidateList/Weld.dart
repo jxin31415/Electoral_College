@@ -7,7 +7,14 @@ class Weld extends StatelessWidget {
     return MaterialApp(
       title: "Electoral College",
       home: Scaffold(
-        appBar: AppBar(title: Text("Republican Candidates"), backgroundColor: Colors.red),
+        appBar: AppBar(
+          title: Text("Republican Candidates"), 
+          backgroundColor: Colors.red,
+          automaticallyImplyLeading: true,
+          leading: IconButton(icon:Icon(Icons.arrow_back),
+            onPressed:() => Navigator.pop(context, false),
+          )
+        ),
         body: ListView(
           children: <Widget>[
             SizedBox(height: 20),
