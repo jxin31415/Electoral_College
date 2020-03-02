@@ -1,116 +1,122 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart' show CalendarCarousel, WeekdayFormat;
-import 'package:flutter_calendar_carousel/classes/event.dart';
-import 'package:flutter_calendar_carousel/classes/event_list.dart';
-
+import 'package:calendar_view_widget/calendar_view_widget.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Calendar extends StatefulWidget {
+
   @override
   CalendarState createState() => CalendarState();
-  }
+}
 
 class CalendarState extends State<Calendar> {
-  DateTime _currentDate = DateTime.now();
+  StreamController<List<Map<String, String>>> eventsController = new StreamController();
+
+  @override
+  void dispose() {
+    eventsController.close();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Electoral College",
-      home: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: Size.fromHeight(50.0), // here the desired height
-          child: AppBar(
-            centerTitle: true,
-            title: Text("Upcoming Elections and Events"),
-            backgroundColor: Colors.transparent,
-            flexibleSpace: Image(
-                image: AssetImage('assets/background.png'),
-                fit: BoxFit.cover,
-            ),
-         ),
-        ),
-      
-        body: ListView(
-         padding: const EdgeInsets.all(15),
-         children: <Widget>[
-          generateCalendar(),
-         ],
-        ),
-        
-      )
-    );
-  } 
+    const eventList = [
+      {
+        'name': 'Test',
+        'date': '2020-03-03 00:00:00',
+        'id': '1',
+      },
+      {
+        'name': 'Test2',
+        'date': '2020-03-06 00:00:00',
+        'id': '2',
+      },
+      {
+        'name': 'Test3',
+        'date': '2020-03-27 00:00:00',
+        'id': '3',
+      }
+    ];
 
-  Widget generateCalendar() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 20.0),
-      child: CalendarCarousel<Event>(
-        onDayPressed: (DateTime date, List<Event> events) {
-          this.setState(() => _currentDate = date);
-        },
-        thisMonthDayBorderColor: Colors.transparent,
-        selectedDayButtonColor: Color(0xFF30A9B2),
-        selectedDayBorderColor: Color(0xFF30A9B2),
-        selectedDayTextStyle: TextStyle(color: Colors.white),
-        weekendTextStyle: TextStyle(color: Colors.red),
-        daysTextStyle: TextStyle(color: Colors.black),
-        nextDaysTextStyle: TextStyle(color: Colors.grey),
-        prevDaysTextStyle: TextStyle(color: Colors.grey),
-        weekdayTextStyle: TextStyle(color: Colors.black),
-        weekDayFormat: WeekdayFormat.short,
-        firstDayOfWeek: 0,
-        weekFormat: false,
-        height: 420.0,
-        selectedDateTime: _currentDate,
-        daysHaveCircularBorder: true,
-        markedDatesMap: _getCarouselMarkedDates(),
-        markedDateWidget: Container(
-          height: 5,
-          width: 5,
-          decoration: new BoxDecoration(
-            color: Color(0xFF30A9B2),
-            shape: BoxShape.rectangle,
-            borderRadius: BorderRadius.all(Radius.circular(8.0)),
+    final theme = ThemeData.dark().copyWith(
+      primaryColor: Colors.blue[300],
+      accentColor: Colors.red[300],
+      canvasColor: Colors.white,
+      backgroundColor: Colors.lightBlue,
+      dividerColor: Colors.blueGrey,
+      textTheme: ThemeData.dark().textTheme.copyWith(
+            display1: TextStyle(
+              fontSize: 21.0,
+            ),
+            subhead: TextStyle(
+              fontSize: 14.0,
+              color: Colors.black,
+            ),
+            headline: TextStyle(
+              fontSize: 18.0,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+            title: TextStyle(
+              fontSize: 14.0,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+      accentTextTheme: ThemeData.dark().accentTextTheme.copyWith(
+            body1: TextStyle(
+              fontSize: 14.0,
+              color: Colors.black,
+            ),
+            title: TextStyle(
+              fontSize: 21.0,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+            display1: TextStyle(
+              fontSize: 21.0,
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+    );
+
+    eventsController.add(eventList);
+    _launchURL(Map<String, String> event) async {
+    const url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+    return new Scaffold(
+      appBar: new AppBar(
+        centerTitle: true,
+        title: Text("Upcoming Elections and Events"),
+        backgroundColor: Colors.transparent,
+        flexibleSpace: Image(
+            image: AssetImage('assets/background.png'),
+            fit: BoxFit.cover,
+        ),
+      ),
+      body: new Center(
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new CalendarView(
+              onEventTapped: _launchURL,
+              titleField: 'name',
+              detailField: 'location',
+              dateField: 'date',
+              separatorTitle: 'Events',
+              theme: theme,
+              eventStream: eventsController.stream,
+            ),
+          ],
         ),
       ),
     );
   }
-
-  EventList<Event> _getCarouselMarkedDates() {
-    return EventList<Event>(
-      events: {
-        new DateTime(2019, 4, 3): [
-          new Event(
-            date: new DateTime(2019, 4, 3),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 5): [
-          new Event(
-            date: new DateTime(2019, 4, 5),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 22): [
-          new Event(
-            date: new DateTime(2019, 4, 22),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 24): [
-          new Event(
-            date: new DateTime(2019, 4, 24),
-            title: 'Event 1',
-          ),
-        ],
-        new DateTime(2019, 4, 26): [
-          new Event(
-            date: new DateTime(2019, 4, 26),
-            title: 'Event 1',
-          ),
-        ],
-      },
-    );
-  }
 }
+

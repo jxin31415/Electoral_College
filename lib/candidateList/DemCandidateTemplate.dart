@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Buttigieg extends StatelessWidget {
+class DemCandidateTemplate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -10,6 +10,7 @@ class Buttigieg extends StatelessWidget {
         appBar: AppBar(
           title: Text("Democratic Candidates"), 
           automaticallyImplyLeading: true,
+          backgroundColor: Colors.blue,
           leading: IconButton(icon:Icon(Icons.arrow_back),
             onPressed:() => Navigator.pop(context, false),
           )
@@ -20,7 +21,7 @@ class Buttigieg extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(10),
               alignment: Alignment.center,
-              child: Text("Pete Buttigieg",
+              child: Text("Bernie Sanders",
                 textScaleFactor: 3,
                 textAlign: TextAlign.center,
               ),

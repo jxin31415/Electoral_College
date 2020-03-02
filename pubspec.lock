@@ -29,6 +29,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  calendar_view_widget:
+    dependency: "direct main"
+    description:
+      name: calendar_view_widget
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.1.6"
   charcode:
     dependency: transitive
     description:
@@ -70,7 +77,7 @@ packages:
       name: date_utils
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.0+3"
+    version: "0.1.0+2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -82,7 +89,7 @@ packages:
       name: flutter_calendar
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.0.9"
+    version: "0.0.8"
   flutter_calendar_carousel:
     dependency: "direct main"
     description:
@@ -122,7 +129,7 @@ packages:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.16.1"
+    version: "0.15.8"
   matcher:
     dependency: transitive
     description:
@@ -226,6 +233,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.6"
+  url_launcher:
+    dependency: "direct main"
+    description:
+      name: url_launcher
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.3"
   vector_math:
     dependency: transitive
     description:
@@ -241,5 +255,5 @@ packages:
     source: hosted
     version: "3.5.0"
 sdks:
-  dart: ">=2.5.0 <3.0.0"
+  dart: ">=2.4.0 <3.0.0"
   flutter: ">=1.12.13+hotfix.5 <2.0.0"

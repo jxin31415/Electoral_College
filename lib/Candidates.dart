@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'candidateList/Biden.dart';
 import 'candidateList/Bloomberg.dart';
-import 'candidateList/Buttigieg.dart';
 import 'candidateList/Gabbard.dart';
 import 'candidateList/Klobuchar.dart';
 import 'candidateList/Sanders.dart';
 import 'candidateList/Trump.dart';
-import 'candidateList/Steyer.dart';
 import 'candidateList/Warren.dart';
 import 'candidateList/Weld.dart';
 
@@ -67,14 +65,6 @@ class Candidates extends StatelessWidget {
           },
         ),
         ListTile(
-          title: generateCandidate('assets/buttigieg.png', "Pete Buttigieg"),
-          onTap: (){
-            Navigator.push(context, MaterialPageRoute(
-             builder: (context)=> Buttigieg())
-           );
-          },
-        ),
-        ListTile(
           title: generateCandidate('assets/gabbard.png', "Tulsi Gabbard"),
           onTap: (){
             Navigator.push(context, MaterialPageRoute(
@@ -95,14 +85,6 @@ class Candidates extends StatelessWidget {
           onTap: (){
             Navigator.push(context, MaterialPageRoute(
              builder: (context)=> Sanders())
-           );
-          },
-        ),
-        ListTile(
-          title: generateCandidate('assets/steyer.png', "Tom Steyer"),
-          onTap: (){
-            Navigator.push(context, MaterialPageRoute(
-             builder: (context)=> Steyer())
            );
           },
         ),
