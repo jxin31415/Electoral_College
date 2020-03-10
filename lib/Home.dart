@@ -64,7 +64,7 @@ class Home extends StatelessWidget {
                goToTab(2, controller);
              },
              child: Text(
-                'Map',
+                'Where do I start?',
                 style: TextStyle(fontSize: 20)
              ),
             ),
@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
                goToTab(4, controller);
              },
              child: Text(
-                'Where do I start?',
+                'Map',
                 style: TextStyle(fontSize: 20)
              ),
             ),

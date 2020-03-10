@@ -43,20 +43,21 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
               tabs: <Tab> [
                 new Tab(icon: new Icon(Icons.home)),
                 new Tab(icon: new Icon(Icons.people)),
-                new Tab(icon: new Icon(Icons.location_on)),
-                new Tab(icon: new Icon(Icons.calendar_today)),
                 new Tab(icon: new Icon(Icons.library_books)),
+                new Tab(icon: new Icon(Icons.calendar_today)),
+                new Tab(icon: new Icon(Icons.location_on)),
               ]
            )
         ),
         body: new TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           controller: _tabController,
           children: <Widget>[
             new home.Home(this._tabController),
             new candidates.Candidates(),
-            new map.Map(),
-            new calendar.Calendar(),
             new article.Article(),
+            new calendar.Calendar(),
+            new map.Map(),
           ]
         ) ,
       ),
