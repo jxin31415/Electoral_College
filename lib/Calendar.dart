@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:calendar_view_widget/calendar_view_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'calendarsrc/calendarView.dart';
 
 class Calendar extends StatefulWidget {
 
@@ -21,21 +21,219 @@ class CalendarState extends State<Calendar> {
   @override
   Widget build(BuildContext context) {
     const eventList = [
+      // Democratic Primary Debates
       {
-        'name': 'Test',
-        'date': '2020-03-03 00:00:00',
+        'name': 'Democratic Primary Debate',
+        'date': '2020-03-15',
+        'id': '5',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2019-06-26',
+        'id': '6',
+      },
+      {
+        'date': '2019-06-27',
+        'id': '6',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2019-07-30',
+        'id': '7',
+      },
+      {
+        'date': '2019-07-31',
+        'id': '7',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2019-09-12',
+        'id': '8',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2019-10-15',
+        'id': '9',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2019-11-20',
+        'id': '10',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2019-12-19',
+        'id': '11',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2020-01-14',
+        'id': '12',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2020-02-07',
+        'id': '13',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2020-02-19',
+        'id': '14',
+      },
+      {
+        'name': 'Democratic Primary Debate',
+        'date': '2020-02-25',
+        'id': '15',
+      },
+
+
+      // Presidential debates
+      {
+        'name': '1st Presidential Debate',
+        'date': '2020-09-29',
         'id': '1',
       },
       {
-        'name': 'Test2',
-        'date': '2020-03-06 00:00:00',
+        'name': 'Vice Presidential Debate',
+        'date': '2020-10-07',
         'id': '2',
       },
       {
-        'name': 'Test3',
-        'date': '2020-03-27 00:00:00',
+        'name': '2nd Presidential Debate',
+        'date': '2020-10-15',
         'id': '3',
-      }
+      },
+      {
+        'name': '3rd Presidential Debate',
+        'date': '2020-10-22',
+        'id': '4',
+      },
+
+      // Primaries and Caucuses
+      {
+        'name': 'Iowa Caucuses',
+        'date': '2020-02-03',
+        'id': '20',
+      },
+      {
+        'name': 'New Hampshire Primaries',
+        'date': '2020-02-11',
+        'id': '21',
+      },
+      {
+        'name': 'Nevada Democratic Caucuses',
+        'date': '2020-02-22',
+        'id': '22',
+      },
+
+      {
+        'name': 'South Carolina Democratic Primary',
+        'date': '2020-02-29',
+        'id': '23',
+      },
+      {
+        'name': 'Super Tuesday (CA, TX, AL, CO, MA, VA, NC, OK, MN, etc.)',
+        'date': '2020-03-03',
+        'id': '24',
+      },
+      {
+        'name': 'ID, MI, MS, MO, ND, WA Primaries/Caucuses',
+        'date': '2020-03-10',
+        'id': '25',
+      },
+      {
+        'name': 'AZ, FL, IL, OH Primaries',
+        'date': '2020-03-17',
+        'id': '26',
+      },
+      {
+        'name': 'AK, HI, WY Primaries/Caucuses',
+        'date': '2020-04-04',
+        'id': '27',
+      },
+      {
+        'name': 'Wisconsin Primaries',
+        'date': '2020-04-07',
+        'id': '28',
+      },
+      {
+        'name': 'NY, MD, CT, DE, PA, RI primaries',
+        'date': '2020-04-28',
+        'id': '29',
+      },
+      {
+        'name': 'Kansas Democratic Primary',
+        'date': '2020-05-02',
+        'id': '30',
+      },
+      {
+        'name': 'Indiana Primaries',
+        'date': '2020-05-05',
+        'id': '31',
+      },
+      {
+        'name': 'Nebraska, West Virginia Primaries',
+        'date': '2020-05-12',
+        'id': '32',
+      },
+      {
+        'name': 'Georgia, Kentucky, Oregon Primaries',
+        'date': '2020-05-19',
+        'id': '33',
+      },
+      {
+        'name': 'DC, MT, NJ, NM, SD primaries',
+        'date': '2020-06-02',
+        'id': '34',
+      },
+      {
+        'name': 'Louisiana Primaries',
+        'date': '2020-06-20',
+        'id': '35',
+      },
+
+      // National Conventions and Election Day
+      {
+        'name': 'Democratic National Convention Starts',
+        'date': '2020-07-13',
+        'id': '50',
+      },
+      {
+        'date': '2020-07-14',
+        'id': '50',
+      },
+      {
+        'date': '2020-07-15',
+        'id': '50',
+      },
+      {
+        'name': 'Democratic National Convention Ends',
+        'date': '2020-07-16',
+        'id': '50',
+      },
+      {
+        'name': 'Republican National Convention Starts',
+        'date': '2020-08-24',
+        'id': '51',
+      },
+      {
+        'date': '2020-08-25',
+        'id': '51',
+      },
+      {
+        'date': '2020-08-26',
+        'id': '51',
+      },
+      {
+        'name': 'Republican National Convention Ends',
+        'date': '2020-08-27',
+        'id': '51',
+      },
+      {
+        'name': 'Election Day',
+        'date': '2020-11-03',
+        'id': '52',
+      },
     ];
 
     final theme = ThemeData.dark().copyWith(

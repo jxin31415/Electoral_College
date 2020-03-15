@@ -40,63 +40,119 @@ class Home extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
-             shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(20.0),
-             ),
-             color: Colors.blue[100],
-             highlightColor: Colors.blue[300],
-             onPressed: () {
-               goToTab(1, controller);
-             },
-             child: Text(
-                'Candidates',
+              shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(10.0),
+              ),
+              textColor: Colors.white,
+              color: Colors.blue[100],
+              highlightColor: Colors.blue[300],
+              onPressed: () {
+                goToTab(1, controller);
+              },
+              padding: const EdgeInsets.all(0),
+              child: Container(
+                decoration: const BoxDecoration(
+                 gradient: LinearGradient(
+                  colors: <Color>[
+                  Color(0xFF0D47A1),
+                  Color(0xFF1976D2),
+                  Color(0xFF42A5F5),
+                ],
+                ),
+              ),
+              padding: const EdgeInsets.all(10.0),
+              child: const Text(
+               'Candidates',
                 style: TextStyle(fontSize: 20)
-             ),
+               ),
+              ),
             ),
             SizedBox(height: 15),
             RaisedButton(
-             shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(20.0),
-             ),
-             color: Colors.blue[100],
-             highlightColor: Colors.blue[300],
-             onPressed: () {
-               goToTab(2, controller);
-             },
-             child: Text(
-                'Where do I start?',
+              shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(10.0),
+              ),
+              padding: const EdgeInsets.all(0),
+              textColor: Colors.white,
+              color: Colors.blue[100],
+              highlightColor: Colors.blue[300],
+              onPressed: () {
+                goToTab(2, controller);
+              },
+              child: Container(
+                decoration: const BoxDecoration(
+                 gradient: LinearGradient(
+                  colors: <Color>[
+                  Color(0xFF0D47A1),
+                  Color(0xFF1976D2),
+                  Color(0xFF42A5F5),
+                ],
+                ),
+              ),
+              padding: const EdgeInsets.all(10.0),
+              child: const Text(
+               'Where do I start?',
                 style: TextStyle(fontSize: 20)
-             ),
+               ),
+              ),
             ),
             SizedBox(height: 15),
             RaisedButton(
-             shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(20.0),
-             ),
-             color: Colors.blue[100],
-             highlightColor: Colors.blue[300],
-             onPressed: () {
-               goToTab(3, controller);
-             },
-             child: Text(
-                'Calendar',
+              shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(10.0),
+              ),
+              padding: const EdgeInsets.all(0),
+              textColor: Colors.white,
+              color: Colors.blue[100],
+              highlightColor: Colors.blue[300],
+              onPressed: () {
+                goToTab(3, controller);
+              },
+              child: Container(
+                decoration: const BoxDecoration(
+                 gradient: LinearGradient(
+                  colors: <Color>[
+                  Color(0xFF0D47A1),
+                  Color(0xFF1976D2),
+                  Color(0xFF42A5F5),
+                ],
+                ),
+              ),
+              padding: const EdgeInsets.all(10.0),
+              child: const Text(
+               'Calendar',
                 style: TextStyle(fontSize: 20)
-             ),
+               ),
+              ),
             ),
             SizedBox(height: 15),
             RaisedButton(
-             shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(20.0),
-             ),
-             color: Colors.blue[100],
-             highlightColor: Colors.blue[300],
-             onPressed: () {
-               goToTab(4, controller);
-             },
-             child: Text(
-                'Map',
+              shape: RoundedRectangleBorder(
+               borderRadius: new BorderRadius.circular(10.0),
+              ),
+              padding: const EdgeInsets.all(0),
+              textColor: Colors.white,
+              color: Colors.blue[100],
+              highlightColor: Colors.blue[300],
+              onPressed: () {
+                goToTab(4, controller);
+              },
+              child: Container(
+                decoration: const BoxDecoration(
+                 gradient: LinearGradient(
+                  colors: <Color>[
+                  Color(0xFF0D47A1),
+                  Color(0xFF1976D2),
+                  Color(0xFF42A5F5),
+                ],
+                ),
+              ),
+              padding: const EdgeInsets.all(10.0),
+              child: const Text(
+               '   Map   ',
                 style: TextStyle(fontSize: 20)
-             ),
+               ),
+              ),
             ),
           ],
         )

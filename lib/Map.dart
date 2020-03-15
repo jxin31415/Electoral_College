@@ -8,7 +8,7 @@ class Map extends StatefulWidget {
 }
 
 class MapState extends State<Map> {
-  static String keyword = "where can I vote";
+  static String keyword = "politic";
 
   @override
   Widget build(BuildContext context) {
