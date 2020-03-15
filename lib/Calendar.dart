@@ -281,13 +281,35 @@ class CalendarState extends State<Calendar> {
 
     eventsController.add(eventList);
     _launchURL(Map<String, String> event) async {
-    const url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
+      String idString = event['id'];
+      int id;
+      try {
+        id = int.parse(idString);
+      } on FormatException {
+        id = -1;
+      }
+      
+      String url;
+      if(id < 5 && id > 0){
+        // Presidential debates
+        url = 'https://www.nytimes.com/2019/10/11/us/politics/when-are-the-2020-presidential-debates.html';
+      } else if (id >= 5 && id <= 15){
+        // Democratic Primary Debates
+        url = 'https://en.wikipedia.org/wiki/2020_Democratic_Party_presidential_debates#Schedule';
+      } else if (id >= 20 && id <= 40){
+        // Primaries and Caucuses
+        url = 'https://www.usvotefoundation.org/vote/PrimaryElections.htm';
+      } else {
+        url = 'https://www.usa.gov/election-day';
+      }
+      
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        throw 'Could not launch $url';
+      }
     }
-  }
+
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
