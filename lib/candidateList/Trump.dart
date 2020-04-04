@@ -12,9 +12,9 @@ class Trump extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return new Scaffold(
         appBar: AppBar(
+            backgroundColor: Colors.red,
             centerTitle: true,
             title: Text('Donald Trump'),
             automaticallyImplyLeading: true,
@@ -273,8 +273,6 @@ class Trump extends StatelessWidget {
             ),
           ],
         ),
-      ),
-
     );
   }
 }

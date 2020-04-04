@@ -4,8 +4,14 @@ import 'Calendar.dart' as calendar;
 import 'Map.dart' as map;
 import 'Candidates.dart' as candidates;
 import 'Home.dart' as home;
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_) {
+    runApp(new MyApp());
+  });
+}
 
 class MyApp extends StatefulWidget {
 

@@ -12,7 +12,7 @@ class MapState extends State<Map> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
         title: Text("Polling Locations"),

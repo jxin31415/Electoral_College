@@ -12,8 +12,7 @@ class Sanders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return new Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: Text('Bernie Sanders'),
@@ -262,8 +261,6 @@ class Sanders extends StatelessWidget {
             ),
           ],
         ),
-      ),
-
     );
 
   }
