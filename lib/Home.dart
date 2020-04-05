@@ -7,9 +7,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Electoral College",
-      home: Scaffold(
+    return new Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(50.0), // here the desired height
           child: AppBar(
@@ -157,7 +155,6 @@ class Home extends StatelessWidget {
           ],
         )
        ),
-      )
     );
   } 
 

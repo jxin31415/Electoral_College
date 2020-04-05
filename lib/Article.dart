@@ -4,11 +4,8 @@ class Article extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Electoral College",
-      home: Scaffold(
-        body: generateArticle()
-       ),
+    return new Scaffold(
+        body: generateArticle(),
       );
   } 
 

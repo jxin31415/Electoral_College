@@ -27,6 +27,7 @@ dependencies:
   flutter_google_places: ^0.2.4
   geocoder: ^0.2.1
   google_maps_webservice: ^0.0.16
+  calendar_view_widget: ^0.1.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -51,15 +52,14 @@ flutter:
 
   assets:
     - assets/background.png
-    - assets/biden.png
-    - assets/sanders.png
-    - assets/warren.png
-    - assets/bloomberg.png
-    - assets/trump.png
-    - assets/gabbard.png
-    - assets/klobuchar.png
-    - assets/weld.png
+    - assets/biden_1.jpg
+    - assets/biden_2.jpg
+    - assets/trump_1.jpeg
+    - assets/trump_2.jpg
+    - assets/bernie_sanders_1.png
+    - assets/bernie_sanders_2.jpg
     - assets/background_capitol.jpg
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
