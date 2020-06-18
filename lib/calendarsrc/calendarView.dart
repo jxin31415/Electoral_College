@@ -116,7 +116,9 @@ class _CalendarState extends State<CalendarView> {
       day.add(event);
       structuredEvents[date.year][date.month][date.day] = day;
     }
-    setState(() => _events = structuredEvents);
+    if(this.mounted){
+      setState(() => _events = structuredEvents);
+    }
   }
 
   bool _validEvent(Map<String, String> event) =>
@@ -128,24 +130,32 @@ class _CalendarState extends State<CalendarView> {
     var nextMonth = _currentMonth + 1;
     if (nextMonth > DateTime.monthsPerYear) {
       nextMonth = nextMonth % DateTime.monthsPerYear;
-      setState(() => _currentYear += 1);
+      if(this.mounted){
+        setState(() => _currentYear += 1);
+      }
     }
-    setState(() {
-      _currentMonth = nextMonth;
-      _currentDay = 0;
-    });
+    if(this.mounted){
+      setState(() {
+        _currentMonth = nextMonth;
+        _currentDay = 0;
+      });
+    }
   }
 
   void _prevMonth() {
     var prevMonth = _currentMonth - 1;
     if (prevMonth <= 0) {
       prevMonth = prevMonth + DateTime.monthsPerYear;
-      setState(() => _currentYear -= 1);
+      if(this.mounted){
+        setState(() => _currentYear -= 1);
+      }
     }
-    setState(() {
-      _currentMonth = prevMonth;
-      _currentDay = 0;
-    });
+    if(this.mounted){
+      setState(() {
+        _currentMonth = prevMonth;
+        _currentDay = 0;
+      });
+    }
   }
 
   Map<int, List> _monthlyEvents() {
@@ -179,11 +189,11 @@ class _CalendarState extends State<CalendarView> {
             children: <Widget>[
               Text(
                 _getMonth(_currentMonth),
-                style: _theme.textTheme.display1,
+                style: _theme.textTheme.headline4,
               ),
               Text(
                 _currentYear.toString(),
-                style: _theme.textTheme.subhead
+                style: _theme.textTheme.subtitle1
                     .copyWith(fontWeight: FontWeight.bold),
               )
             ],
@@ -210,7 +220,7 @@ class _CalendarState extends State<CalendarView> {
             color: _theme.backgroundColor,
             child: Text(
               widget.separatorTitle,
-              style: _theme.accentTextTheme.display1,
+              style: _theme.accentTextTheme.headline4,
               textAlign: TextAlign.center,
             ),
           ),
@@ -223,7 +233,9 @@ class _CalendarState extends State<CalendarView> {
     if (_currentDay == day) {
       day = 0;
     }
-    setState(() => _currentDay = day);
+    if(this.mounted){
+      setState(() => _currentDay = day);
+    }
   }
 
   _onEventTapped(Map<String, String> event) {

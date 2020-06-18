@@ -39,7 +39,7 @@ class Home extends StatelessWidget {
           children: <Widget>[
             RaisedButton(
               shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(10.0),
+               borderRadius: new BorderRadius.circular(30.0),
               ),
               textColor: Colors.white,
               color: Colors.blue[100],
@@ -50,12 +50,13 @@ class Home extends StatelessWidget {
               padding: const EdgeInsets.all(0),
               child: Container(
                 decoration: const BoxDecoration(
-                 gradient: LinearGradient(
-                  colors: <Color>[
-                  Color(0xFF0D47A1),
-                  Color(0xFF1976D2),
-                  Color(0xFF42A5F5),
-                ],
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  gradient: LinearGradient(
+                    colors: <Color>[
+                    Color(0xFF0D47A1),
+                    Color(0xFF1976D2),
+                    Color(0xFF42A5F5),
+                  ],
                 ),
               ),
               padding: const EdgeInsets.all(10.0),
@@ -68,7 +69,7 @@ class Home extends StatelessWidget {
             SizedBox(height: 15),
             RaisedButton(
               shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(10.0),
+               borderRadius: new BorderRadius.circular(30.0),
               ),
               padding: const EdgeInsets.all(0),
               textColor: Colors.white,
@@ -79,12 +80,13 @@ class Home extends StatelessWidget {
               },
               child: Container(
                 decoration: const BoxDecoration(
-                 gradient: LinearGradient(
-                  colors: <Color>[
-                  Color(0xFF0D47A1),
-                  Color(0xFF1976D2),
-                  Color(0xFF42A5F5),
-                ],
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  gradient: LinearGradient(
+                    colors: <Color>[
+                    Color(0xFF0D47A1),
+                    Color(0xFF1976D2),
+                    Color(0xFF42A5F5),
+                  ],
                 ),
               ),
               padding: const EdgeInsets.all(10.0),
@@ -97,7 +99,7 @@ class Home extends StatelessWidget {
             SizedBox(height: 15),
             RaisedButton(
               shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(10.0),
+               borderRadius: new BorderRadius.circular(30.0),
               ),
               padding: const EdgeInsets.all(0),
               textColor: Colors.white,
@@ -108,12 +110,13 @@ class Home extends StatelessWidget {
               },
               child: Container(
                 decoration: const BoxDecoration(
-                 gradient: LinearGradient(
-                  colors: <Color>[
-                  Color(0xFF0D47A1),
-                  Color(0xFF1976D2),
-                  Color(0xFF42A5F5),
-                ],
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  gradient: LinearGradient(
+                    colors: <Color>[
+                    Color(0xFF0D47A1),
+                    Color(0xFF1976D2),
+                    Color(0xFF42A5F5),
+                  ],
                 ),
               ),
               padding: const EdgeInsets.all(10.0),
@@ -126,7 +129,7 @@ class Home extends StatelessWidget {
             SizedBox(height: 15),
             RaisedButton(
               shape: RoundedRectangleBorder(
-               borderRadius: new BorderRadius.circular(10.0),
+               borderRadius: new BorderRadius.circular(30.0),
               ),
               padding: const EdgeInsets.all(0),
               textColor: Colors.white,
@@ -137,17 +140,18 @@ class Home extends StatelessWidget {
               },
               child: Container(
                 decoration: const BoxDecoration(
-                 gradient: LinearGradient(
-                  colors: <Color>[
-                  Color(0xFF0D47A1),
-                  Color(0xFF1976D2),
-                  Color(0xFF42A5F5),
-                ],
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  gradient: LinearGradient(
+                    colors: <Color>[
+                    Color(0xFF0D47A1),
+                    Color(0xFF1976D2),
+                    Color(0xFF42A5F5),
+                  ],
                 ),
               ),
               padding: const EdgeInsets.all(10.0),
               child: const Text(
-               '   Map   ',
+               ' Find your local city hall ',
                 style: TextStyle(fontSize: 20)
                ),
               ),

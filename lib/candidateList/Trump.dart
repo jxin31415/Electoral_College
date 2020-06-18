@@ -228,7 +228,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("During his presidency, Trump withdrew the U.S. from the Paris Climate Accord, believing that it was an unfair agreement. He approved the construction of the  Keystone XL and Dakota Access pipelines, which generated 42.000 jobs and repealed from the Clean Power Plan, estimated to increase energy costs to up to a million. Trump signed an executive order to increase the leases of offshore drilling. "),
+                                  child: Text("During his presidency, Trump withdrew the U.S. from the Paris Climate Accord, believing that it was an unfair agreement. He approved the construction of the Keystone XL and Dakota Access pipelines, which generated 42,000 jobs and repealed the Clean Power Plan, estimated to increase energy costs to up to a million. Trump signed an executive order to increase the leases of offshore drilling. "),
                                 )
                               ]
                           ),
@@ -250,7 +250,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("During his presidency, Trump aspired to build the southern border wall, discontinue the DACA program,  and implement strict immigration restrictions to limit illegal immigration into the country as stated in his “zero-tolerance” policy. He established a travel ban on several Muslim countries and called a national emergency to gather federal funding to build the southern border wall. "),
+                                  child: Text("During his presidency, Trump aspired to build the southern border wall, discontinue the DACA program, and implement strict immigration restrictions to limit illegal immigration into the country as stated in his “zero-tolerance” policy. He established a travel ban on several Muslim countries and called a national emergency to gather federal funding to build the southern border wall. "),
                                 )
                               ]
                           ),

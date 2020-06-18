@@ -94,7 +94,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child:Text("Biden plans on building on the Affordable Care Act by giving Americans more choice, reducing health care costs, extending tax dollars for lower premiums, reducing drug prices, and making our health care system less complex to navigate."),
+                                  child:Text("Biden plans on building on the Affordable Care Act by giving Americans more choice, reducing health care costs, extending tax dollars for lower premiums, reducing drug prices, and making our health care system less complex."),
                                 )
                               ]
                           ),
@@ -103,7 +103,7 @@ class Biden extends StatelessWidget {
                               color: Colors.lightBlue,
                               splashColor: Colors.lightBlueAccent,
                               onPressed: (){
-                                _launchURL("https://feelthebern.org/bernie-sanders-on-healthcare/");
+                                _launchURL("https://joebiden.com/healthcare/");
                               }
                           ),
                         ],
@@ -115,7 +115,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Education: As President, Joe Biden plans to support educators with competitive wages and benefits, giving students the resources they need like health professionals for mental health care, financial aid, infrastructure safety, and gun reform, and to put every child on the path to success with no discrimination and investing in our children at birth. Biden will continue the support of our children by funcind community colleges and colleges of importance to our communities and making college a more reliable option. "),
+                                  child: Text("Joe Biden plans to support educators with competitive wages and benefits, giving students the resources they need like health professionals for mental health care, financial aid, infrastructure safety, and gun reform, and to support every child with no discrimination. Biden will fund community colleges and colleges of importance to our communities and make college a more reliable option. "),
                                 )
                               ]
                           ),
@@ -144,7 +144,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden plans to tax millionaires and corporations more and prevent corporations from false reporting of profits as well as ending stepped-up in basis. Stepped-up in basis is when an asset is passed on to someone else (usually due to inheritance) the profits that are taxed are not based on what it was initially bought for, but what it was valued at the time of inheritance (which means less reported profit, which means less taxes paid). "),
+                                  child: Text("Joe Biden plans to tax millionaires and corporations more and prevent corporations from reporting false profits as well as ending stepped-up in basis. Stepped-up in basis is when an asset is passed on to someone else (usually due to inheritance) -- the profits that are taxed are not based on what it was initially bought for, but what it was valued at the time of inheritance (which means less reported profit, which means less taxes paid). "),
                                 )
                               ]
                           ),
@@ -173,7 +173,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden plans to hold gun manufacturers accountable, get assault weapons of high capacity off our streets, keeping guns out of dangerous hands by closing loopholes, funding background check systems, keeping guns out of domestic abuses’ hands, and working with urban communities to keep our homes safe. To help survivors, Biden will also work with health professionals on trauma-based crae."),
+                                  child: Text("Joe Biden plans to hold gun manufacturers accountable, ban assault weapons of high capacity, close loopholes, fund background check systems, prevent domestic abuse that utilizes guns, and work with urban communities to keep our homes safe. To help survivors, Biden will also work with health professionals on trauma-based care."),
                                 )
                               ]
                           ),
@@ -194,7 +194,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("While his stance on reproductive rights has an urky history, Joe Biden supports the upholding of Roe v Wade, even if he supports the Hyde Amendment, which bans the use of tex dollars to pay for abortions other than in life-threatening cases or if the preganancy arises from rape or incest."),
+                                  child: Text("Joe Biden supports Roe v Wade, even if he supports the Hyde Amendment, which bans the use of tex dollars to pay for abortions other than in life-threatening cases or if the preganancy arises from rape or incest."),
                                 )
                               ]
                           ),
@@ -215,7 +215,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden’s Clean Energy Revolution promises a 100% clean economy with zero net emissions by 2050, building a more resilient nation through cleaner and resilient infrastructure and communities, rejoining the Paris Climate Agreement and rallying he rest of the world against climate change, hold polluters accountable, help low income or communities of color that are disproportionately affected, and investing in coal/power plant communities as we shift to renewable resources."),
+                                  child: Text("Joe Biden’s Clean Energy Revolution promises a 100% clean economy with zero net emissions by 2050, building a more resilient nation through cleaner and resilient infrastructure and communities, rejoining the Paris Climate Agreement and rallying the rest of the world against climate change, holding polluters accountable, and helping low income or communities of color that are disproportionately affected."),
                                 )
                               ]
                           ),
@@ -236,7 +236,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("As president, Joe Biden plans to undo the damage of Trump’s immigration system by investing in border security and border screening and modernizing our immigration system for refugees and asylum-seekers, welcoming and integrating immigrants into our communities, and addressing the violence, instability, and loack of opportunity that causes immigration."),
+                                  child: Text("Joe Biden plans to undo the actions of Trump’s immigration system by investing in border security and border screening and modernizing our immigration system for refugees and asylum-seekers, welcoming and integrating immigrants into our communities, and addressing the violence, instability, and loack of opportunity that causes immigration."),
                                 )
                               ]
                           ),

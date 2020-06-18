@@ -121,7 +121,7 @@ class CalendarState extends State<Calendar> {
         'id': '21',
       },
       {
-        'name': 'Nevada Democratic Caucuses',
+        'name': 'Nevada Democratic Caucus',
         'date': '2020-02-22',
         'id': '22',
       },
@@ -142,22 +142,27 @@ class CalendarState extends State<Calendar> {
         'id': '25',
       },
       {
-        'name': 'AZ, FL, IL, OH Primaries',
+        'name': 'AZ, FL, IL Primaries',
         'date': '2020-03-17',
         'id': '26',
       },
       {
-        'name': 'AK, HI, WY Primaries/Caucuses',
-        'date': '2020-04-04',
+        'name': 'Wisconsin Primaries',
+        'date': '2020-04-07',
         'id': '27',
       },
       {
-        'name': 'Wisconsin Primaries',
-        'date': '2020-04-07',
+        'name': 'Alaska Democratic Primary',
+        'date': '2020-04-10',
         'id': '28',
       },
       {
-        'name': 'NY, MD, CT, DE, PA, RI primaries',
+        'name': 'Wyoming Democratic Caucus',
+        'date': '2020-04-17',
+        'id': '43',
+      },
+      {
+        'name': 'Ohio primaries',
         'date': '2020-04-28',
         'id': '29',
       },
@@ -167,48 +172,83 @@ class CalendarState extends State<Calendar> {
         'id': '30',
       },
       {
-        'name': 'Indiana Primaries',
-        'date': '2020-05-05',
-        'id': '31',
-      },
-      {
-        'name': 'Nebraska, West Virginia Primaries',
+        'name': 'Nebraska Primaries',
         'date': '2020-05-12',
         'id': '32',
       },
       {
-        'name': 'Georgia, Kentucky, Oregon Primaries',
+        'name': 'Oregon Primaries',
         'date': '2020-05-19',
         'id': '33',
       },
       {
-        'name': 'DC, MT, NJ, NM, SD primaries',
+        'name': 'Hawaii Democratic Primary',
+        'date': '2020-05-22',
+        'id': '31',
+      },
+      {
+        'name': 'DC, MT, NM, SD Primaries',
         'date': '2020-06-02',
         'id': '34',
       },
       {
-        'name': 'Louisiana Primaries',
-        'date': '2020-06-20',
+        'name': 'Guam, Virgin Isl. Democratic Caucuses',
+        'date': '2020-06-06',
         'id': '35',
+      },
+      {
+        'name': 'Puerto Rico Republican Primary',
+        'date': '2020-06-07',
+        'id': '36',
+      },
+      {
+        'name': 'Georgia, West Virginia Primaries',
+        'date': '2020-06-09',
+        'id': '37',
+      },
+      {
+        'name': 'Kentucky, New York Primaries',
+        'date': '2020-06-23',
+        'id': '38',
+      },
+      {
+        'name': 'Delaware, New Jersey Primaries',
+        'date': '2020-07-07',
+        'id': '39',
+      },
+      {
+        'name': 'Louisiana Primaries',
+        'date': '2020-07-11',
+        'id': '40',
+      },
+      {
+        'name': 'Puerto Rico Democratic Primary',
+        'date': '2020-07-12',
+        'id': '41',
+      },
+      {
+        'name': 'Connecticut Primaries',
+        'date': '2020-08-11',
+        'id': '42',
       },
 
       // National Conventions and Election Day
       {
         'name': 'Democratic National Convention Starts',
-        'date': '2020-07-13',
+        'date': '2020-08-17',
         'id': '50',
       },
       {
-        'date': '2020-07-14',
+        'date': '2020-08-18',
         'id': '50',
       },
       {
-        'date': '2020-07-15',
+        'date': '2020-08-19',
         'id': '50',
       },
       {
         'name': 'Democratic National Convention Ends',
-        'date': '2020-07-16',
+        'date': '2020-08-20',
         'id': '50',
       },
       {
@@ -230,9 +270,14 @@ class CalendarState extends State<Calendar> {
         'id': '51',
       },
       {
-        'name': 'Election Day',
+        'name': '2020 Election Day',
         'date': '2020-11-03',
         'id': '52',
+      },
+      {
+        'name': 'Presidential Inauguration',
+        'date': '2021-01-20',
+        'id': '53',
       },
     ];
 
@@ -243,35 +288,35 @@ class CalendarState extends State<Calendar> {
       backgroundColor: Colors.lightBlue,
       dividerColor: Colors.blueGrey,
       textTheme: ThemeData.dark().textTheme.copyWith(
-            display1: TextStyle(
+            headline4: TextStyle(
               fontSize: 21.0,
             ),
-            subhead: TextStyle(
+            subtitle1: TextStyle(
               fontSize: 14.0,
               color: Colors.black,
             ),
-            headline: TextStyle(
+            headline5: TextStyle(
               fontSize: 18.0,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
-            title: TextStyle(
+            headline6: TextStyle(
               fontSize: 14.0,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
           ),
       accentTextTheme: ThemeData.dark().accentTextTheme.copyWith(
-            body1: TextStyle(
+            bodyText2: TextStyle(
               fontSize: 14.0,
               color: Colors.black,
             ),
-            title: TextStyle(
+            headline6: TextStyle(
               fontSize: 21.0,
               color: Colors.black,
               fontWeight: FontWeight.bold,
             ),
-            display1: TextStyle(
+            headline4: TextStyle(
               fontSize: 21.0,
               color: Colors.black,
               fontWeight: FontWeight.bold,
@@ -333,6 +378,14 @@ class CalendarState extends State<Calendar> {
               theme: theme,
               eventStream: eventsController.stream,
             ),
+            SizedBox(height: 10),
+            Container(
+              padding: EdgeInsets.all(15),
+              child: Text("Note that due to COVID-19 many primaries and caucuses have been rescheduled. Several Republican ones have been canceled altogether (delegates go towards current president Donald Trump). Please consult Google for current scheduling.",
+                style: TextStyle(fontStyle: FontStyle.italic),
+                textScaleFactor: 0.8,
+              )
+            )
           ],
         ),
       ),

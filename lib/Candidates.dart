@@ -46,24 +46,25 @@ class Candidates extends StatelessWidget {
             }
           },
         ),
-        
-        ListTile(
-          title: generateCandidate('assets/bernie_sanders_2.jpg', "Bernie Sanders"),
-          onTap: (){
-            if(Navigator != null){
-              Navigator.push(context, MaterialPageRoute(
-                builder: (context)=> Sanders())
-              );
-            }
-          },
-        ),
+         
+        // DROPPED OUT
+        // ListTile(
+        //   title: generateCandidate('assets/bernie_sanders_2.jpg', "Bernie Sanders"),
+        //   onTap: (){
+        //     if(Navigator != null){
+        //       Navigator.push(context, MaterialPageRoute(
+        //         builder: (context)=> Sanders())
+        //       );
+        //     }
+        //   },
+        // ),
         ListTile(
          title: SizedBox(height: 20),
         ),
         ListTile(
           title: Container(
             height: 50,
-            color: Colors.red[200],
+            color: Colors.red[300],
             child: const Center(child: Text('Republican Candidates')),
           ),
         ),

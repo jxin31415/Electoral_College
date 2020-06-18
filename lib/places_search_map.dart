@@ -8,11 +8,12 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:flutter_google_places/flutter_google_places.dart';
 import 'package:geocoder/geocoder.dart';
 import 'package:google_maps_webservice/places.dart';
+import 'dart:math';
+
 
 
 class PlacesSearchMap extends StatefulWidget {
-  final String keyword;
-  PlacesSearchMap(this.keyword);
+  PlacesSearchMap();
 
   @override
   State<PlacesSearchMap> createState() {
@@ -21,7 +22,7 @@ class PlacesSearchMap extends StatefulWidget {
 }
 
 class _PlacesSearchMapSample extends State<PlacesSearchMap> {
-  static const String _API_KEY = 'APIKEYHERE';
+  static const String _API_KEY = 'KEYHERE';
   GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: _API_KEY);
 
   static double latitude = 29.656388;
@@ -144,44 +145,55 @@ class _PlacesSearchMapSample extends State<PlacesSearchMap> {
 
   Future<Null> displayPrediction(Prediction p) async {
     if (p != null) {
-      print("DISPLYING PREDICTION");
-      PlacesDetailsResponse detail =
-      await _places.getDetailsByPlaceId(p.placeId);
+      print("DISPLAYING PREDICTION");
+      PlacesDetailsResponse detail;
+      try {
+        detail = await _places.getDetailsByPlaceId(p.placeId);
+      } catch (Exception) {
+        print("Error");
+      }
 
-      print("CLCULATING LL");
-      var placeId = p.placeId;
+      print("PLACE ID RECEIVED");
+      //var placeId = p.placeId;
       double lat = detail.result.geometry.location.lat;
       double lng = detail.result.geometry.location.lng;
 
-      var address = await Geocoder.local.findAddressesFromQuery(p.description);
-
-      print("PRINTING");
-      _controller.animateCamera(
-        CameraUpdate.newCameraPosition(
-        CameraPosition(
-            target: LatLng(lat, lng), zoom: 8.0),
-        ),
+      //var address = await Geocoder.local.findAddressesFromQuery(p.description);
+      // _controller.animateCamera(
+      //   CameraUpdate.newCameraPosition(
+      //   CameraPosition(
+      //       target: LatLng(lat, lng), zoom: 8.0),
+      //   ),
+      // );
+      _controller.moveCamera(
+        CameraUpdate.newLatLngZoom(LatLng(lat, lng), 14.0),
       );
       latitude = lat;
       longitude = lng;
-      searchNearby(lat, lng);
-    }
+      print(lat);
+      print(lng);
+      searchNearby(latitude, longitude);
+      // print("Success");
+    }  
   }
 
   void searchNearby(double latitude, double longitude) async {
+    print("Searching nearby");
     setState(() {
       markers.clear();
     });
     String url =
-        '$baseUrl?key=$_API_KEY&location=$latitude,$longitude&radius=20000&keyword=${widget.keyword}';
+        '$baseUrl?key=$_API_KEY&type=city_hall&location=$latitude,$longitude&radius=30000';
     print(url);
     final response = await http.get(url);
+    print(url);
 
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
       _handleResponse(data);
     } else {
-      throw Exception('An error occurred getting places nearby');
+      print("Error found");
+      //throw Exception('An error occurred getting places nearby');
     }
 
     // make sure to hide searching
@@ -191,6 +203,7 @@ class _PlacesSearchMapSample extends State<PlacesSearchMap> {
   }
 
   void _handleResponse(data){
+    print("Handling response");
     // bad api key or otherwise
       if (data['status'] == "REQUEST_DENIED") {
         setState(() {
@@ -204,6 +217,7 @@ class _PlacesSearchMapSample extends State<PlacesSearchMap> {
           for (int i = 0; i < places.length; i++) {
             markers.add(
               Marker(
+                icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueOrange),
                 markerId: MarkerId(places[i].placeId),
                 position: LatLng(places[i].geometry.location.lat,
                     places[i].geometry.location.long),

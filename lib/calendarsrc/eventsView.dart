@@ -37,7 +37,7 @@ class EventsView extends StatelessWidget {
               Text(
                 day.toString(),
                 textAlign: TextAlign.center,
-                style: theme.accentTextTheme.title,
+                style: theme.accentTextTheme.headline6,
               ),
             ],
           ),
@@ -57,11 +57,11 @@ class EventsView extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       event[titleField] ?? "",
-                      style: theme.textTheme.headline,
+                      style: theme.textTheme.headline5,
                     ),
                     Text(
                       event[detailField] ?? "",
-                      style: theme.textTheme.subhead,
+                      style: theme.textTheme.subtitle1,
                     ),
                   ],
                 ),

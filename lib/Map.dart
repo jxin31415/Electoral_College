@@ -8,21 +8,20 @@ class Map extends StatefulWidget {
 }
 
 class MapState extends State<Map> {
-  static String keyword = "politic";
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         centerTitle: true,
-        title: Text("Polling Locations"),
+        title: Text("City Halls Map"),
         backgroundColor: Colors.transparent,
         flexibleSpace: Image(
             image: AssetImage('assets/background.png'),
             fit: BoxFit.cover,
         ),
       ),
-        body: PlacesSearchMap(keyword),
+        body: PlacesSearchMap(),
     );
   }
 }
