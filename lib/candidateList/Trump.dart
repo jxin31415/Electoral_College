@@ -42,7 +42,7 @@ class Trump extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Expanded(
+                        Expanded(child: Center(
                           child: Column(
                             children: <Widget>[
                               Text(
@@ -61,9 +61,18 @@ class Trump extends StatelessWidget {
                                 softWrap: true,
                               ),
                               Text(
-                                'President of the U.S.',
+                                'Running mate: Mike Pence',
                                 style: TextStyle(
                                   fontSize: 15.0,
+                                ),
+                                softWrap: true,
+                              ),
+                              SizedBox(height:10),
+                              Text(
+                                'Current US President',
+                                style: TextStyle(
+                                  fontSize: 15.0,
+                                  fontStyle: FontStyle.italic,
                                 ),
                                 softWrap: true,
                               ),
@@ -71,10 +80,11 @@ class Trump extends StatelessWidget {
                                 'and Businessman',
                                 style: TextStyle(
                                   fontSize: 15.0,
+                                  fontStyle: FontStyle.italic,
                                 ),
                                 softWrap: true,
                               ),
-                              Text(""),
+                              SizedBox(height: 15),
                               RaisedButton(
                                   child: Text("Website"),
                                   color: Colors.red,
@@ -85,10 +95,7 @@ class Trump extends StatelessWidget {
                               ),
                             ],
                           ),
-
-                        ),
-
-
+                        ),),
                       ],
                     ),
                   ),

@@ -41,7 +41,7 @@ class Biden extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Expanded(
+                        Expanded(child: Center(
                           child: Column(
                             children: <Widget>[
                               Text(
@@ -60,13 +60,22 @@ class Biden extends StatelessWidget {
                                 softWrap: true,
                               ),
                               Text(
-                                'Former U.S. Vice President',
+                                'Running mate: Undecided',
                                 style: TextStyle(
                                   fontSize: 15.0,
                                 ),
                                 softWrap: true,
                               ),
-                              Text(""),
+                              SizedBox(height:10),
+                              Text(
+                                'Former U.S. Vice President',
+                                style: TextStyle(
+                                  fontSize: 15.0,
+                                  fontStyle: FontStyle.italic,
+                                ),
+                                softWrap: true,
+                              ),
+                              SizedBox(height: 15),
                               RaisedButton(
                                   child: Text("Website"),
                                   color: Colors.lightBlue,
@@ -77,10 +86,7 @@ class Biden extends StatelessWidget {
                               ),
                             ],
                           ),
-
-                        ),
-
-
+                        ),),
                       ],
                     ),
                   ),
