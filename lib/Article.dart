@@ -16,11 +16,9 @@ class Article extends StatelessWidget {
     return MaterialApp(
       title: "Electoral College",
       home: Scaffold(
-        appBar: AppBar(
-            leading: IconButton(icon:Icon(Icons.arrow_back),
-              onPressed:() => Navigator.pop(context, false),
-            )
-        ),
+        // appBar: AppBar(
+            
+        // ),
           body: generateArticle()
       ),
     );
@@ -29,20 +27,20 @@ class Article extends StatelessWidget {
   Widget generateArticle(){
     return ListView(
       children: <Widget>[
+        SizedBox(height: 15),
         Card(
-          child: Column(
-            children: <Widget>[
-              Text(
-                  "How to Register to Vote",
-                style: TextStyle(
-                  fontSize: 25.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ]
-          ),
+          color: Colors.blue[200],
+          margin: EdgeInsets.all(20),
+          child: Center(heightFactor: 2, child: Text(
+              "How to Register to Vote",
+            style: TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),),
 
         ),
+        SizedBox(height: 15),
         new Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[

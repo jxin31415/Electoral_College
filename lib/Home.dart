@@ -51,11 +51,10 @@ class Home extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                  gradient: LinearGradient(
+                   gradient: LinearGradient(
                     colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFF2196F3),
+                    Color(0xFFF44336),
                   ],
                 ),
               ),
@@ -81,11 +80,10 @@ class Home extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                  gradient: LinearGradient(
+                   gradient: LinearGradient(
                     colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFF2196F3),
+                    Color(0xFFF44336),
                   ],
                 ),
               ),
@@ -111,11 +109,10 @@ class Home extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(15)),
-                  gradient: LinearGradient(
+                   gradient: LinearGradient(
                     colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFF2196F3),
+                    Color(0xFFF44336),
                   ],
                 ),
               ),
@@ -143,9 +140,8 @@ class Home extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(15)),
                   gradient: LinearGradient(
                     colors: <Color>[
-                    Color(0xFF0D47A1),
-                    Color(0xFF1976D2),
-                    Color(0xFF42A5F5),
+                    Color(0xFF2196F3),
+                    Color(0xFFF44336),
                   ],
                 ),
               ),
