@@ -53,7 +53,7 @@ class Article extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.all(10.0),
-                      child:Text("Online voter registration is a more modern way of registering voters and replaces the more traditional paper forms. As of June 2020, 39 states plus the District of Columbia allow online voter registration. Applicants must submit a form of valid identification like a driver's license or state-issued identification card. Online voter registration only implements advanced security measures to ensure that applicants' data is not stolen."),
+                      child:Text("Online voter registration is a more modern way of registering voters and replaces the more traditional paper registration forms. As of June 2020, 39 states plus the District of Columbia allow online voter registration. Applicants must submit a form of valid identification like a driver's license or state-issued identification card. Online voter registration also implements advanced security measures to ensure that applicants' data is not stolen."),
                     ),
                   ],
                 ),
@@ -79,7 +79,7 @@ class Article extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.all(10.0),
-                      child:Text("Voters can also be registered in person at a state or local election office. In certain cases, they can also register at the department of motor vehicles, armend forces recruitment centers, and state and county public assistance offices. Each area and facility has their own requirements so be sure to check with your local office first."),
+                      child:Text("Voters can also be registered in person at a state or local election office. In certain cases, they can also register at the department of motor vehicles, armed forces recruitment centers, and state and county public assistance offices. Each area and facility has their own requirements so be sure to check with your local office first."),
                     ),
                   ],
                 ),
@@ -92,7 +92,7 @@ class Article extends StatelessWidget {
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.all(10.0),
-                      child:Text("If you are a U.S. citizen living outside the U.S., a service member stationed overseas, or a spouse or family member of a service member stationed overseas you can register to vote and request a ballot form."),
+                      child:Text("If you are a U.S. citizen living outside the U.S., a service member stationed overseas, or a spouse or family member of a service member stationed overseas, you can register to vote and request a ballot form."),
                     ),
                   ],
                 ),
