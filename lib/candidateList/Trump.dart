@@ -63,7 +63,7 @@ class Trump extends StatelessWidget {
                               Text(
                                 'Running mate: Mike Pence',
                                 style: TextStyle(
-                                  fontSize: 15.0,
+                                  fontSize: 12.0,
                                 ),
                                 softWrap: true,
                               ),

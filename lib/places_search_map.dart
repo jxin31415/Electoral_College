@@ -22,7 +22,7 @@ class PlacesSearchMap extends StatefulWidget {
 }
 
 class _PlacesSearchMapSample extends State<PlacesSearchMap> {
-  static const String _API_KEY = 'KEYHERE';
+  static const String _API_KEY = 'KEY_HERE';
   GoogleMapsPlaces _places = GoogleMapsPlaces(apiKey: _API_KEY);
 
   static double latitude = 29.656388;
@@ -166,7 +166,7 @@ class _PlacesSearchMapSample extends State<PlacesSearchMap> {
       //   ),
       // );
       _controller.moveCamera(
-        CameraUpdate.newLatLngZoom(LatLng(lat, lng), 14.0),
+        CameraUpdate.newLatLngZoom(LatLng(lat, lng), 10.0),
       );
       latitude = lat;
       longitude = lng;

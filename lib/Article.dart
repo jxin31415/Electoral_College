@@ -14,12 +14,10 @@ class Article extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Electoral College",
       home: Scaffold(
-        // appBar: AppBar(
-            
-        // ),
-          body: generateArticle()
+        body: generateArticle()
       ),
     );
   }

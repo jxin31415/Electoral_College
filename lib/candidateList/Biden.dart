@@ -62,13 +62,21 @@ class Biden extends StatelessWidget {
                               Text(
                                 'Running mate: Undecided',
                                 style: TextStyle(
-                                  fontSize: 15.0,
+                                  fontSize: 12.0,
                                 ),
                                 softWrap: true,
                               ),
                               SizedBox(height:10),
                               Text(
-                                'Former U.S. Vice President',
+                                'Former U.S.',
+                                style: TextStyle(
+                                  fontSize: 15.0,
+                                  fontStyle: FontStyle.italic,
+                                ),
+                                softWrap: true,
+                              ),
+                              Text(
+                                'Vice President',
                                 style: TextStyle(
                                   fontSize: 15.0,
                                   fontStyle: FontStyle.italic,
