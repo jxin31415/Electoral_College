@@ -28,6 +28,7 @@ dependencies:
   geocoder: ^0.2.1
   google_maps_webservice: ^0.0.16
   calendar_view_widget: ^0.1.0
+  flutter_local_notifications: ^1.4.4
 
 
   # The following adds the Cupertino Icons font to your application.
