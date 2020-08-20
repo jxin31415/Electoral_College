@@ -28,7 +28,7 @@ class MyAppState extends State<MyApp> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     _tabController = new TabController(vsync: this, length: 5);
-    var initializationSettingsAndroid = new AndroidInitializationSettings("@mipmap/ic_launcher");
+    var initializationSettingsAndroid = new AndroidInitializationSettings('notif_icon');
     var initializationSettingsIOS = new IOSInitializationSettings();
 
     var initializationSettings = new InitializationSettings(initializationSettingsAndroid, initializationSettingsIOS);
