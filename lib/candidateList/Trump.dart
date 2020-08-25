@@ -13,15 +13,15 @@ class Trump extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: AppBar(
-            backgroundColor: Colors.red,
-            centerTitle: true,
-            title: Text('Donald Trump'),
-            automaticallyImplyLeading: true,
-            leading: IconButton(icon: Icon(Icons.arrow_back),
-              onPressed: () => Navigator.pop(context, false),
-            )
-        ),
+      appBar: AppBar(
+          backgroundColor: Colors.red,
+          centerTitle: true,
+          title: Text('Donald Trump'),
+          automaticallyImplyLeading: true,
+          leading: IconButton(icon: Icon(Icons.arrow_back),
+            onPressed: () => Navigator.pop(context, false),
+          )
+      ),
         body: ListView(
           children: <Widget>[
             Card(
@@ -42,7 +42,7 @@ class Trump extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Expanded(child: Center(
+                        Expanded(
                           child: Column(
                             children: <Widget>[
                               Text(
@@ -61,18 +61,9 @@ class Trump extends StatelessWidget {
                                 softWrap: true,
                               ),
                               Text(
-                                'Running mate: Mike Pence',
-                                style: TextStyle(
-                                  fontSize: 12.0,
-                                ),
-                                softWrap: true,
-                              ),
-                              SizedBox(height:10),
-                              Text(
-                                'Current US President',
+                                'President of the U.S.',
                                 style: TextStyle(
                                   fontSize: 15.0,
-                                  fontStyle: FontStyle.italic,
                                 ),
                                 softWrap: true,
                               ),
@@ -80,11 +71,10 @@ class Trump extends StatelessWidget {
                                 'and Businessman',
                                 style: TextStyle(
                                   fontSize: 15.0,
-                                  fontStyle: FontStyle.italic,
                                 ),
                                 softWrap: true,
                               ),
-                              SizedBox(height: 15),
+                              Text(""),
                               RaisedButton(
                                   child: Text("Website"),
                                   color: Colors.red,
@@ -95,7 +85,10 @@ class Trump extends StatelessWidget {
                               ),
                             ],
                           ),
-                        ),),
+
+                        ),
+
+
                       ],
                     ),
                   ),
@@ -103,13 +96,35 @@ class Trump extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ExpansionTile(
+                        title: Text("Vice President"),
+                        children: <Widget>[
+                          Column(
+                              children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Text("Trump's vice president is Michael R. Pence. Prior to becoming vice president, Pence was a member of the U.S. House of Representatives for Indiana from 2001 to 2013 and served as the 50th governor of Indiana from 2013 to 2017. In addition, he served as the Chairman of the House Republican Study Committee and House Republican Conference Chairman."),
+                                )
+                              ]
+                          ),
+                          RaisedButton(
+                              child: Text("Read More"),
+                              color: Colors.red,
+                              splashColor: Colors.redAccent,
+                              onPressed: () {
+                                _launchURL(
+                                    "https://www.whitehouse.gov/people/mike-pence/");
+                              }
+                          ),
+                        ],
+                      ),
+                      ExpansionTile(
                         title: Text("Healthcare"),
                         children: <Widget>[
                           Column(
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Trump pledges to undermine the Affordable Care Act and replace it during his second term. Trump requires that immigrant-visa applicants be able to obtain health insurance. He also declared the opioid crisis a nationwide public emergency, providing \$900 million in funds to overcome the crisis, and reduced the cost of prescription drugs."),
+                                  child: Text("Trump pledges to undermine the Affordable Care Act and replace it after the 2020 elections. Moreover, Trump requires that immigrant-visa applicants have the means to obtain health insurance. During his presidency, he declared the opioid crisis a public nationwide emergency and provided \$900 million in funding to overcome the opioid crisis and reduced the cost of prescription drugs."),
                                 )
                               ]
                           ),
@@ -140,7 +155,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Trump's administration sought to decline access of information from the Consumer Financial Protection Bureau for federal student loan services. He also proposed budgets to prioritize public and private school choice and raise federal charter school grants."),
+                                  child: Text("Trump’s administration requested for the federal student loan services to decline access of information from the Consumer Financial Protection Bureau. Trump also proposed budgets to make public and private school choice a priority and seeks to raise federal charter school grants. "),
                                 )
                               ]
                           ),
@@ -171,7 +186,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Under Trump's administration, Congress passed tax cuts and relief for 82% of the middle class through the Tax Cuts and Jobs Act. He also cut taxes for small businesses by 20%. By reducing taxes for more than 500 companies, these companies were able to provide bonuses."),
+                                  child: Text("Under Trump’s presidency, Congress passed tax cuts and relief for 82% of middle-class families through “The Tax Cuts and Jobs Act”. In addition, he cut taxes for small businesses by 20%. By alleviating the tax burden for 500+ companies, the companies were able to fund bonuses."),
                                 )
                               ]
                           ),
@@ -193,7 +208,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Trump's goal is to create tools that can detect potential mass shooters online. He seeks to end the 'glorification of violence' in video games, reform mental health legislation, create red flag laws, and create a fast-tracking death penalties for extreme criminals -- terrorists and mass murderers."),
+                                  child: Text("Trump aims to devise tools to detect potential mass shooters online, call an end to the 'glorification of violence' in video games, reform mental health laws, legistlate red flag laws, and establish a fast-tracking death penalty for terrorists and mass murderers."),
                                 )
                               ]
                           ),
@@ -214,7 +229,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Trump created legislature limiting access to safe abortions for women. His Global Gag Rule demanded that US health care services abroad refuse to provide abortion services and refuse to refer to abortion as a safe family-planning method."),
+                                  child: Text("Trump imposed a policy restricting access to safe abortion services for women. Trump’s Global Gag Rule demands that American international health care services abroad no longer spend their own money to provide legal abortion services, or even give out information that refers to safe abortion as a “method of family planning”. "),
                                 )
                               ]
                           ),
@@ -235,7 +250,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("During his first term, Trump withdrew the U.S. from the Paris Climate Accord, believing that it was an unfair agreement. He approved construction of the Keystone XL and Dakota Access pipelines, generating 42,0000 jobs. However, he also repealed the Clean Power Plan, which is estimated to raise energy costs up to \$1 million. Trump also signed an executive order increasing leases for offshore drilling."),
+                                  child: Text("During his presidency, Trump withdrew the U.S. from the Paris Climate Accord, believing that it was an unfair agreement. He approved the construction of the  Keystone XL and Dakota Access pipelines, which generated 42.000 jobs and repealed from the Clean Power Plan, estimated to increase energy costs to up to a million. Trump signed an executive order to increase the leases of offshore drilling. "),
                                 )
                               ]
                           ),
@@ -257,7 +272,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("During his presidency Trump sought to build the southern border wall, end the DACA program, and implement strict immigration restrictions in order to lower illegal immigration as stated in his \"zero-tolerance\" policy. He banned travel from several Muslim countries and called a national emergency to gather funding to build the Mexican border wall."),
+                                  child: Text("During his presidency, Trump aspired to build the southern border wall, discontinue the DACA program,  and implement strict immigration restrictions to limit illegal immigration into the country as stated in his “zero-tolerance” policy. He established a travel ban on several Muslim countries and called a national emergency to gather federal funding to build the southern border wall. "),
                                 )
                               ]
                           ),
@@ -280,6 +295,7 @@ class Trump extends StatelessWidget {
             ),
           ],
         ),
-    );
+      );
+
   }
 }
