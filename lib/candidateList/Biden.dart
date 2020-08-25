@@ -13,14 +13,14 @@ class Biden extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        appBar: AppBar(
-            centerTitle: true,
-            title: Text('Joe Biden'),
-            automaticallyImplyLeading: true,
-            leading: IconButton(icon:Icon(Icons.arrow_back),
-              onPressed:() => Navigator.pop(context, false),
-            )
-        ),
+      appBar: AppBar(
+          centerTitle: true,
+          title: Text('Joe Biden'),
+          automaticallyImplyLeading: true,
+          leading: IconButton(icon:Icon(Icons.arrow_back),
+            onPressed:() => Navigator.pop(context, false),
+          )
+      ),
         body: ListView(
           children: <Widget>[
             Card(
@@ -41,7 +41,7 @@ class Biden extends StatelessWidget {
                             ),
                           ],
                         ),
-                        Expanded(child: Center(
+                        Expanded(
                           child: Column(
                             children: <Widget>[
                               Text(
@@ -60,30 +60,13 @@ class Biden extends StatelessWidget {
                                 softWrap: true,
                               ),
                               Text(
-                                'Running mate: Undecided',
-                                style: TextStyle(
-                                  fontSize: 12.0,
-                                ),
-                                softWrap: true,
-                              ),
-                              SizedBox(height:10),
-                              Text(
-                                'Former U.S.',
+                                'Former U.S. Vice President',
                                 style: TextStyle(
                                   fontSize: 15.0,
-                                  fontStyle: FontStyle.italic,
                                 ),
                                 softWrap: true,
                               ),
-                              Text(
-                                'Vice President',
-                                style: TextStyle(
-                                  fontSize: 15.0,
-                                  fontStyle: FontStyle.italic,
-                                ),
-                                softWrap: true,
-                              ),
-                              SizedBox(height: 15),
+                              Text(""),
                               RaisedButton(
                                   child: Text("Website"),
                                   color: Colors.lightBlue,
@@ -94,7 +77,10 @@ class Biden extends StatelessWidget {
                               ),
                             ],
                           ),
-                        ),),
+
+                        ),
+
+
                       ],
                     ),
                   ),
@@ -102,13 +88,34 @@ class Biden extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       ExpansionTile(
+                        title: Text("Running Mate"),
+                        children: <Widget>[
+                          Column(
+                              children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.all(10.0),
+                                  child: Text("Biden's running mate is Kamala D. Harris. Harris has served as the U.S. Senator for California since 2017. Additionally, she has positions on the Homeland Security and Governmental Affairs Committee, the Select Committee on Intelligence, the Committee on the Judiciary, and the Committee on the Budget.")
+                                )
+                              ]
+                          ),
+                          RaisedButton(
+                              child: Text("Read More"),
+                              color: Colors.lightBlue,
+                              splashColor: Colors.lightBlueAccent,
+                              onPressed: (){
+                                _launchURL("https://www.harris.senate.gov/");
+                              }
+                          ),
+                        ],
+                      ),
+                      ExpansionTile(
                         title: Text("Healthcare"),
                         children: <Widget>[
                           Column(
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child:Text("Biden plans on building on the Affordable Care Act by letting Americans have the choice to switch to public health insurance(like Medicare), lowering costs of healthcare, creating a premium tax credit, lowering drug costs, guaranteeing medical attention as a right for all Americans, and simplifying the healthcare system."),
+                                  child:Text("Biden plans on building on the Affordable Care Act by giving Americans more choice, reducing health care costs, extending tax dollars for lower premiums, reducing drug prices, and making our health care system less complex to navigate."),
                                 )
                               ]
                           ),
@@ -117,7 +124,7 @@ class Biden extends StatelessWidget {
                               color: Colors.lightBlue,
                               splashColor: Colors.lightBlueAccent,
                               onPressed: (){
-                                _launchURL("https://joebiden.com/healthcare/");
+                                _launchURL("https://feelthebern.org/bernie-sanders-on-healthcare/");
                               }
                           ),
                         ],
@@ -129,7 +136,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden plans to support educators with higher wages and more benefits, provide student resources(including mental health care), provide financial aid, adopt gun reform, and to support every child without discrimination."),
+                                  child: Text("Education: As President, Joe Biden plans to support educators with competitive wages and benefits, giving students the resources they need like health professionals for mental health care, financial aid, infrastructure safety, and gun reform, and to put every child on the path to success with no discrimination and investing in our children at birth. Biden will continue the support of our children by funcind community colleges and colleges of importance to our communities and making college a more reliable option. "),
                                 )
                               ]
                           ),
@@ -158,7 +165,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden plans to tax millionaires and corporations more and prohibit corporations from announcing false profits as well as ending stepped-up in basis. Stepped-up in basis is when an asset is passed on to someone else (usually due to inheritance) -- the profits that are taxed are not based on what it was initially bought for, but what it was valued at the time of inheritance (which means less reported profit, which means less taxes paid). "),
+                                  child: Text("Joe Biden plans to tax millionaires and corporations more and prevent corporations from false reporting of profits as well as ending stepped-up in basis. Stepped-up in basis is when an asset is passed on to someone else (usually due to inheritance) the profits that are taxed are not based on what it was initially bought for, but what it was valued at the time of inheritance (which means less reported profit, which means less taxes paid). "),
                                 )
                               ]
                           ),
@@ -187,7 +194,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden plans to make gun manufacturers responsible for the weapons they sell, ban assault weapons of high capacity, fund background checks, prevent domestic abuse that utilizes guns, close loopholes, and work with urban communities to keep our homes safe. To help survivors, Biden will also work with health professionals on trauma-based care."),
+                                  child: Text("Joe Biden plans to hold gun manufacturers accountable, get assault weapons of high capacity off our streets, keeping guns out of dangerous hands by closing loopholes, funding background check systems, keeping guns out of domestic abuses’ hands, and working with urban communities to keep our homes safe. To help survivors, Biden will also work with health professionals on trauma-based crae."),
                                 )
                               ]
                           ),
@@ -208,7 +215,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden supports Roe v Wade, even if he supports the Hyde Amendment, which bans the use of tex dollars to pay for abortions other than in life-threatening cases or if the pregnancy arises from rape or incest."),
+                                  child: Text("While his stance on reproductive rights has an urky history, Joe Biden supports the upholding of Roe v Wade, even if he supports the Hyde Amendment, which bans the use of tex dollars to pay for abortions other than in life-threatening cases or if the preganancy arises from rape or incest."),
                                 )
                               ]
                           ),
@@ -229,7 +236,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden’s Clean Energy Revolution promises a completely clean economy(0 net emissions) by 2050, more modern, resilient infrastructure, US re-entry into the Paris Climate Agreement, punishments for polluters, and help for disadvantaged communities."),
+                                  child: Text("Joe Biden’s Clean Energy Revolution promises a 100% clean economy with zero net emissions by 2050, building a more resilient nation through cleaner and resilient infrastructure and communities, rejoining the Paris Climate Agreement and rallying he rest of the world against climate change, hold polluters accountable, help low income or communities of color that are disproportionately affected, and investing in coal/power plant communities as we shift to renewable resources."),
                                 )
                               ]
                           ),
@@ -250,7 +257,8 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden plans to undo Trump's actions by supporting border security, screening, and modernization of the immigration system, assimilating and welcoming immigrants into the US, and addressing the causes of immigration."),                                )
+                                  child: Text("As president, Joe Biden plans to undo the damage of Trump’s immigration system by investing in border security and border screening and modernizing our immigration system for refugees and asylum-seekers, welcoming and integrating immigrants into our communities, and addressing the violence, instability, and loack of opportunity that causes immigration."),
+                                )
                               ]
                           ),
                           RaisedButton(
@@ -271,7 +279,8 @@ class Biden extends StatelessWidget {
             ),
           ],
         ),
-    );
+      );
+
 
   }
 }
