@@ -17,7 +17,7 @@ class Article extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Electoral College",
       home: Scaffold(
-        body: generateArticle()
+          body: generateArticle()
       ),
     );
   }
@@ -25,12 +25,15 @@ class Article extends StatelessWidget {
   Widget generateArticle(){
     return ListView(
       children: <Widget>[
+
+        // Registering to Vote
+
         SizedBox(height: 15),
         Card(
           color: Colors.blue[200],
           margin: EdgeInsets.all(20),
           child: Center(heightFactor: 2, child: Text(
-              "How to Register to Vote",
+            "How to Register to Vote",
             style: TextStyle(
               fontSize: 25.0,
               fontWeight: FontWeight.bold,
@@ -40,8 +43,8 @@ class Article extends StatelessWidget {
         ),
         SizedBox(height: 15),
         new Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
             ExpansionTile(
               title: Text("Register Online"),
               children: <Widget>[
@@ -94,30 +97,30 @@ class Article extends StatelessWidget {
                 ),
               ],
             ),
-            ],
+          ],
         ),
         new Column(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(15.0),
-              child: Text("Go to usa.gov to learn more about voter registration.",
-                style: TextStyle(
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
+                padding: EdgeInsets.all(15.0),
+                child: Text("Learn more about voter registration.",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
             ),
             RaisedButton(
-              child: Text("usa.gov"),
-              color: Colors.lightBlue,
-              splashColor: Colors.lightBlueAccent,
-              onPressed: (){
-                _launchURL("https://www.usa.gov/register-to-vote");
-              }
+                child: Text("usa.gov"),
+                color: Colors.lightBlue,
+                splashColor: Colors.lightBlueAccent,
+                onPressed: (){
+                  _launchURL("https://www.usa.gov/register-to-vote");
+                }
             ),
             Padding(
                 padding: EdgeInsets.all(15.0),
-                child: Text("Go to vote.gov to learn about your state's specific voting requirements.",
+                child: Text("Learn about your state's specific voting requirements.",
                   style: TextStyle(
                     fontSize: 15.0,
                     fontWeight: FontWeight.bold,
@@ -131,6 +134,189 @@ class Article extends StatelessWidget {
                 splashColor: Colors.redAccent,
                 onPressed: (){
                   _launchURL("https://vote.gov/");
+                }
+            ),
+          ],
+        ),
+
+
+
+
+
+        // How to Vote
+
+        SizedBox(height: 15),
+        Card(
+          color: Colors.blue[200],
+          margin: EdgeInsets.all(20),
+          child: Center(heightFactor: 2, child: Text(
+            "How to Vote",
+            style: TextStyle(
+              fontSize: 25.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),),
+
+        ),
+        SizedBox(height: 15),
+        new Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            ExpansionTile(
+              title: Text("Voting Updates Due to COVID-19"),
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text("Due to COVID-19, most states are making it easier to cast absentee ballots through mail-in voting for the Novemeber federal election. Some states still allow voters to vote in person even with mail-in voting. If you choose to go to a polling station, check the location of your polling station because it may have changed due to COVID-19. Voting online is still not an option for federal elections. Find more about your state's voting process below.")
+                    ),
+                  ],
+                ),
+                RaisedButton(
+                    child: Text("NASS"),
+                    color: Colors.lightBlue,
+                    splashColor: Colors.lightBlueAccent,
+                    onPressed: (){
+                      _launchURL("https://www.nass.org/can-i-vote/absentee-early-voting");
+                    }
+                ),
+                RaisedButton(
+                    child: Text("usa.gov"),
+                    color: Colors.red,
+                    splashColor: Colors.redAccent,
+                    onPressed: (){
+                      _launchURL("https://www.usa.gov/election-office");
+                    }
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("Voter ID Requirements"),
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text("Thirty-six states require voters to show some form of identification at voting polls. Many states require some form of photo identification like a driver's license, state-issued identification card, military ID, or tribal ID. Some states accept identification without photos like a bank statement. Each state has different laws. Click below to read more.")
+                    ),
+                  ],
+                ),
+                RaisedButton(
+                    child: Text("NCSL"),
+                    color: Colors.lightBlue,
+                    splashColor: Colors.lightBlueAccent,
+                    onPressed: (){
+                      _launchURL("https://www.ncsl.org/research/elections-and-campaigns/voter-id.aspx");
+                    }
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("Polling Stations"),
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text("A polling location is where voters go to cast their vote. A polling place is assigned to a voter based on their address. You should go to your assigned polling place. You will not be on the roster if you go to alternate locations. Make sure you check your polling place beforehand as it can change from election to election. ")
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("Early Voting"),
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text("Early voting allows voters to cast their vote ahead of Election Day. This is useful for voters who have scheduling conflicts on Election Day. Many states have early voting, but click below to learn more about early voting in your state.")
+                    ),
+                  ],
+                ),
+                RaisedButton(
+                    child: Text("NCSL"),
+                    color: Colors.red,
+                    splashColor: Colors.redAccent,
+                    onPressed: (){
+                      _launchURL("https://www.ncsl.org/research/elections-and-campaigns/early-voting-in-state-elections.aspx");
+                    }
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("Absentee Voting and Voting by Mail"),
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text("Absentee voting allows people to cast their vote via mail. In order to vote by mail, an absentee ballot has to be requested. A third of states require an excuse to be made in order for voters to be eligible for an absentee ballot. Absentee ballots are usually requested by citizens out of the country or people who are physically incapable of going to a polling station. Click below to learn more about absentee voting.")
+                    ),
+                  ],
+                ),
+                RaisedButton(
+                    child: Text("NCSL"),
+                    color: Colors.lightBlue,
+                    splashColor: Colors.lightBlueAccent,
+                    onPressed: (){
+                      _launchURL("https://www.ncsl.org/research/elections-and-campaigns/absentee-and-early-voting.aspx");
+                    }
+                ),
+              ],
+            ),
+            ExpansionTile(
+              title: Text("Voting Online"),
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: Text("Voting online is not allowed for federal elections. You can vote by going to a polling station or casting an absentee ballot.")
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
+        new Column(
+          children: <Widget>[
+            Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Learn more about the voting process.",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+            ),
+            RaisedButton(
+                child: Text("usa.gov"),
+                color: Colors.red,
+                splashColor: Colors.redAccent,
+                onPressed: (){
+                  _launchURL("https://www.usa.gov/how-to-vote");
+                }
+            ),
+            Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Learn more about voting specifics in your state.",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  textAlign: TextAlign.center,
+                )
+            ),
+            RaisedButton(
+                child: Text("vote.org"),
+                color: Colors.lightBlue,
+                splashColor: Colors.lightBlueAccent,
+                onPressed: (){
+                  _launchURL("https://www.vote.org/");
                 }
             ),
           ],
