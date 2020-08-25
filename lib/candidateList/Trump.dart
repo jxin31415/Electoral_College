@@ -208,7 +208,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Trump aims to devise tools to detect potential mass shooters online, call an end to the 'glorification of violence' in video games, reform mental health laws, legistlate red flag laws, and establish a fast-tracking death penalty for terrorists and mass murderers."),
+                                  child: Text("Trump aims to devise tools to detect potential mass shooters online, call an end to the 'glorification of violence' in video games, reform mental health laws, legislate red flag laws, and establish a fast-tracking death penalty for terrorists and mass murderers."),
                                 )
                               ]
                           ),
@@ -250,7 +250,7 @@ class Trump extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("During his presidency, Trump withdrew the U.S. from the Paris Climate Accord, believing that it was an unfair agreement. He approved the construction of the  Keystone XL and Dakota Access pipelines, which generated 42.000 jobs and repealed from the Clean Power Plan, estimated to increase energy costs to up to a million. Trump signed an executive order to increase the leases of offshore drilling. "),
+                                  child: Text("During his presidency, Trump withdrew the U.S. from the Paris Climate Accord, believing that it was an unfair agreement. He approved the construction of the  Keystone XL and Dakota Access pipelines, which generated 42,000 jobs and repealed from the Clean Power Plan, estimated to increase energy costs to up to a million. Trump signed an executive order to increase the leases of offshore drilling. "),
                                 )
                               ]
                           ),

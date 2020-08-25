@@ -136,7 +136,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Education: As President, Joe Biden plans to support educators with competitive wages and benefits, giving students the resources they need like health professionals for mental health care, financial aid, infrastructure safety, and gun reform, and to put every child on the path to success with no discrimination and investing in our children at birth. Biden will continue the support of our children by funcind community colleges and colleges of importance to our communities and making college a more reliable option. "),
+                                  child: Text("Education: As President, Joe Biden plans to support educators with competitive wages and benefits, giving students the resources they need like health professionals for mental health care, financial aid, infrastructure safety, and gun reform, and to put every child on the path to success with no discrimination and investing in our children at birth. Biden will continue the support of our children by funding community colleges and colleges of importance to our communities and making college a more reliable option. "),
                                 )
                               ]
                           ),
@@ -194,7 +194,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("Joe Biden plans to hold gun manufacturers accountable, get assault weapons of high capacity off our streets, keeping guns out of dangerous hands by closing loopholes, funding background check systems, keeping guns out of domestic abuses’ hands, and working with urban communities to keep our homes safe. To help survivors, Biden will also work with health professionals on trauma-based crae."),
+                                  child: Text("Joe Biden plans to hold gun manufacturers accountable, get assault weapons of high capacity off our streets, keeping guns out of dangerous hands by closing loopholes, funding background check systems, keeping guns out of domestic abuses’ hands, and working with urban communities to keep our homes safe. To help survivors, Biden will also work with health professionals on trauma-based care."),
                                 )
                               ]
                           ),
@@ -215,7 +215,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("While his stance on reproductive rights has an urky history, Joe Biden supports the upholding of Roe v Wade, even if he supports the Hyde Amendment, which bans the use of tex dollars to pay for abortions other than in life-threatening cases or if the preganancy arises from rape or incest."),
+                                  child: Text("While his stance on reproductive rights has an urky history, Joe Biden supports the upholding of Roe v Wade, even if he supports the Hyde Amendment, which bans the use of tax dollars to pay for abortions other than in life-threatening cases or if the preganancy arises from rape or incest."),
                                 )
                               ]
                           ),
@@ -257,7 +257,7 @@ class Biden extends StatelessWidget {
                               children: <Widget>[
                                 Padding(
                                   padding: EdgeInsets.all(10.0),
-                                  child: Text("As president, Joe Biden plans to undo the damage of Trump’s immigration system by investing in border security and border screening and modernizing our immigration system for refugees and asylum-seekers, welcoming and integrating immigrants into our communities, and addressing the violence, instability, and loack of opportunity that causes immigration."),
+                                  child: Text("As president, Joe Biden plans to undo the damage of Trump’s immigration system by investing in border security and border screening and modernizing our immigration system for refugees and asylum-seekers, welcoming and integrating immigrants into our communities, and addressing the violence, instability, and lack of opportunity that causes immigration."),
                                 )
                               ]
                           ),
