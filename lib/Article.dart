@@ -163,42 +163,13 @@ class Article extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             ExpansionTile(
-              title: Text("Voting Updates Due to COVID-19"),
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text("Due to COVID-19, most states are making it easier to cast absentee ballots through mail-in voting for the Novemeber federal election. Some states still allow voters to vote in person even with mail-in voting. If you choose to go to a polling station, check the location of your polling station because it may have changed due to COVID-19. Voting online is still not an option for federal elections. Find more about your state's voting process below.")
-                    ),
-                  ],
-                ),
-                RaisedButton(
-                    child: Text("NASS"),
-                    color: Colors.lightBlue,
-                    splashColor: Colors.lightBlueAccent,
-                    onPressed: (){
-                      _launchURL("https://www.nass.org/can-i-vote/absentee-early-voting");
-                    }
-                ),
-                RaisedButton(
-                    child: Text("usa.gov"),
-                    color: Colors.red,
-                    splashColor: Colors.redAccent,
-                    onPressed: (){
-                      _launchURL("https://www.usa.gov/election-office");
-                    }
-                ),
-              ],
-            ),
-            ExpansionTile(
               title: Text("Voter ID Requirements"),
               children: <Widget>[
                 Column(
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.all(10.0),
-                      child: Text("Thirty-six states require voters to show some form of identification at voting polls. Many states require some form of photo identification like a driver's license, state-issued identification card, military ID, or tribal ID. Some states accept identification without photos like a bank statement. Each state has different laws. Click below to read more.")
+                      child: Text("Thirty-six states require voters to show some form of identification at polling locations. Many states require some form of photo identification like a driver's license, state-issued identification card, military ID, or tribal ID. Some states accept identification without photos like a bank statement. Each state has different laws. Click below to read more.")
                     ),
                   ],
                 ),
