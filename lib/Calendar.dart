@@ -378,14 +378,6 @@ class CalendarState extends State<Calendar> {
               theme: theme,
               eventStream: eventsController.stream,
             ),
-            SizedBox(height: 10),
-            Container(
-              padding: EdgeInsets.all(15),
-              child: Text("Note that due to COVID-19 many primaries and caucuses have been rescheduled. Several Republican ones have been canceled altogether (delegates go towards current president Donald Trump). Please consult Google for current scheduling.",
-                style: TextStyle(fontStyle: FontStyle.italic),
-                textScaleFactor: 0.8,
-              )
-            )
           ],
         ),
       ),
